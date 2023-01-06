@@ -5,12 +5,6 @@ body {
 /* Containers */
 
 
-.container-wrapper--red {
-    background-color: #f05f40;
-    color: white;
-}
-
-
 .callout-container {
     height: 100vh;
     background: url('../images/landingpage.jpg') no-repeat bottom right fixed;
@@ -20,9 +14,6 @@ body {
     background-size: cover;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: relative;
 }
 
@@ -32,6 +23,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
 
 }
 
@@ -42,23 +34,45 @@ body {
 
 /* Navbar */
 
+.navalert-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(170, 240, 209, 0.3);
+}
+
+
 .navbar .navbar-brand {
 
-    color: #ffafcc;
+    color: #85131C;
 }
 
 .navbar .navbar-brand:hover {
 
-    color: #bde0fe;
+    color: #4B0082;
 }
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
 
 #navbarDropdownMenuLink,
 #home,
 #about {
 
-    color: #a2d2ff;
+    color: #4B0082;
     font-weight: lighter;
-    font-size: larger;
+    font-size: 14px;
 }
 
 .navbar .navbar-nav a {
@@ -68,13 +82,13 @@ body {
 
 #inline {
 
-    color: #bde0fe;
+    color: #85131C;
     font-weight: lighter;
-    font-size: larger;
+    font-size: 14px;
 }
 
 #booking {
-    color: #cdb4db;
+    color: #4B0082;
     font-size: larger;
     font-weight: lighter;
 }
@@ -86,73 +100,57 @@ body {
 }
 
 .jumbotron h1 {
-    color: #cdb4db;
-    font-weight: bold;
-    padding-left: 450px;
-    margin-bottom: 15px;
-}
-
-/* Sign up button */
-
-.btn {
-    font-weight: bold;
     color: white;
-    border-radius: 23px;
-    width: 160px;
-    margin-left: 530px;
-    background-color: #cdb4db
-}
+    padding-left: 750px;
+    font-weight: lighter;
+    padding-top: 370px;
 
-.btn:hover {
-    background-color: #a2d2ff;
 }
 
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
+    .jumbotron h1 {
 
-    jumbotron h1 {
-        padding-left: 280px;
-        margin-bottom: 80px;
-        margin-top: 5px;
-    }
-
-    .btn {
-
-        margin-left: 450px;
+        padding-left: 600px;
 
     }
 }
 
+/* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
+    .jumbotron h1 {
 
-    jumbotron h1 {
-        font-size: 35px;
-        margin-left: 30px;
-        padding-left: 15px;
+        padding-left: 500px;
 
     }
 
-    .btn {
-
-        margin: 0;
-
-    }
 }
 
-/* for sreens size from 750px and down */
-@media screen and (max-width: 750px) {
-    
-    jumbotron h1 {
-        font-size: 35px;
-        margin-left: 30px;
-        padding-left: 15px;
-
-    }
-
-    .btn {
+/* media queries */
+/* for sreens size from 650px and down */
+@media screen and (max-width: 650px) {
+    .jumbotron h1 {
 
         margin: 0;
+        padding: 0;
+        justify-content: center;
 
     }
+
+}
+
+/* media queries */
+/* for sreens size from 450px and down */
+@media screen and (max-width: 450px) {
+    .jumbotron h1 {
+        font-size: 20px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+
+    }
+
+}
