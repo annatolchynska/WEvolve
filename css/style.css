@@ -86,20 +86,10 @@ body {
 }
 
 .jumbotron h1 {
-    color: white;
+    color: #cdb4db;
     font-weight: bold;
     padding-left: 450px;
     margin-bottom: 15px;
-}
-
-/* Block divider */
-
-.block-divider--white {
-    background-color: white;
-    width: 35px;
-    height: 5px;
-    margin-right: 280px;
-
 }
 
 /* Sign up button */
@@ -116,3 +106,53 @@ body {
 .btn:hover {
     background-color: #a2d2ff;
 }
+
+/* media queries */
+/* for sreens size from 1200px and down */
+@media screen and (max-width: 1200px) {
+
+    jumbotron h1 {
+        padding-left: 280px;
+        margin-bottom: 80px;
+        margin-top: 5px;
+    }
+
+    .btn {
+
+        margin-left: 450px;
+
+    }
+}
+
+/* for sreens size from 950px and down */
+@media screen and (max-width: 950px) {
+
+    jumbotron h1 {
+        font-size: 35px;
+        margin-left: 30px;
+        padding-left: 15px;
+
+    }
+
+    .btn {
+
+        margin: 0;
+
+    }
+}
+
+/* for sreens size from 750px and down */
+@media screen and (max-width: 750px) {
+    
+    jumbotron h1 {
+        font-size: 35px;
+        margin-left: 30px;
+        padding-left: 15px;
+
+    }
+
+    .btn {
+
+        margin: 0;
+
+    }
