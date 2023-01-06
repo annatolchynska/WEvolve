@@ -1,0 +1,89 @@
+body {
+    font-family: 'Yeon Sung', serif;
+}
+
+/* Containers */
+
+
+.container-wrapper--red {
+    background-color: #f05f40;
+    color: white;
+}
+
+
+.callout-container {
+    height: 100vh;
+    background: url('../images/landingpage.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+/* Navbar */
+
+
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: rgba(162, 210, 255, 0.445);
+    border: 0;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #ffafcc;
+}
+
+.navbar .navbar-nav a {
+    font-weight: bold;
+    color: #ffc8dd;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.jumbotron .lead {
+    color: #a7a7a7;
+    margin: 25px 0;
+}
+
+.jumbotron small {
+    font-size: 60%;
+    font-style: italic;
+    color: #d0d0d0;
+}
