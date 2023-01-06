@@ -23,7 +23,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
 
 }
 
@@ -103,7 +103,7 @@ body {
     color: #aa7fc2;
     padding-left: 750px;
     font-weight: lighter;
-    padding-top: 370px;
+    padding-top: 350px;
 
 }
 
@@ -112,8 +112,8 @@ body {
 @media screen and (max-width: 1200px) {
     .jumbotron h1 {
 
-        padding-left: 500px;
-        padding-bottom: 200px;
+        padding-left: 510px;
+        padding-top: 300px;
 
     }
 }
@@ -122,16 +122,16 @@ body {
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
     .jumbotron h1 {
-        padding-bottom: 300px;
-        padding-left: 500px;
+        padding-top: 300px;
+        padding-left: 450px;
 
     }
 
 }
 
 /* media queries */
-/* for sreens size from 650px and down */
-@media screen and (max-width: 650px) {
+/* for sreens size from 700px and down */
+@media screen and (max-width: 700px) {
     .jumbotron h1 {
         color: white;
         margin: 0;
