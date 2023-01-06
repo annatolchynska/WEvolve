@@ -18,7 +18,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    
+
 }
 
 .content-container {
@@ -42,26 +42,41 @@ body {
 
 /* Navbar */
 
-
-.navbar {
-    margin-bottom: 0;
-    width: 100%;
-    background-color: rgba(162, 210, 255, 0.445);
-    border: 0;
-}
-
-.navbar .navbar-toggler {
-    border: 0;
-}
-
 .navbar .navbar-brand {
-    font-weight: bold;
+
     color: #ffafcc;
+}
+
+.navbar .navbar-brand:hover {
+
+    color: #bde0fe;
+}
+
+#navbarDropdownMenuLink,
+#home,
+#about {
+
+    color: #a2d2ff;
+    font-weight: lighter;
+    font-size: larger;
 }
 
 .navbar .navbar-nav a {
     font-weight: bold;
     color: #ffc8dd;
+}
+
+#inline {
+
+    color: #bde0fe;
+    font-weight: lighter;
+    font-size: larger;
+}
+
+#booking {
+    color: #cdb4db;
+    font-size: larger;
+    font-weight: lighter;
 }
 
 /* Jumbotron */
@@ -73,17 +88,31 @@ body {
 .jumbotron h1 {
     color: white;
     font-weight: bold;
-    margin-bottom: 30px;
+    padding-left: 450px;
+    margin-bottom: 15px;
+}
+
+/* Block divider */
+
+.block-divider--white {
+    background-color: white;
+    width: 35px;
+    height: 5px;
+    margin-right: 280px;
+
+}
+
+/* Sign up button */
+
+.btn {
+    font-weight: bold;
     color: white;
+    border-radius: 23px;
+    width: 160px;
+    margin-left: 530px;
+    background-color: #cdb4db
 }
 
-.jumbotron .lead {
-    color: #a7a7a7;
-    margin: 25px 0;
-}
-
-.jumbotron small {
-    font-size: 60%;
-    font-style: italic;
-    color: #d0d0d0;
+.btn:hover {
+    background-color: #a2d2ff;
 }

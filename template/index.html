@@ -27,8 +27,8 @@
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-                <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="">About</a></li>
+                <li class="active nav-item mr-2"><a class="nav-link" href="/" id="home">Home</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="" id="about">About</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,11 +45,12 @@
             </ul>
         </div>
         <div class="d-none d-md-block">
-            <p class="navbar-text my-auto mr-2">It's a safe space</p>
-            <a href="/login">Book an appointment</a>
+            <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-vihara"></i></p>
+            <a href="/login" id="booking">Book an appointment</a>
         </div>
 
     </nav>
+    <!--main header-->
     <div class="container-fluid callout-container">
 
         <div class="opaque-overlay">&nbsp;</div>
@@ -57,8 +58,8 @@
             <div class="col-12">
                 <section class="callout jumbotron text-center">
                     <h1 class="jumbotron-header">Leave that dark place...happiness is here!</h1>
-                    <hr class="block-divider block-divider--orange">
-                    <p><button class="btn btn-lg btn-success" data-toggle="modal" data-target="#signUpModal">Sign
+                    <hr class="block-divider block-divider--white">
+                    <p><button class="btn btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
                             Up!</button></p>
 
                 </section>
