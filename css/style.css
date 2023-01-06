@@ -67,7 +67,7 @@ body {
 
 
 #navbarDropdownMenuLink,
-#home,
+#contacts,
 #about {
 
     color: #4B0082;
@@ -100,7 +100,7 @@ body {
 }
 
 .jumbotron h1 {
-    color: white;
+    color: #aa7fc2;
     padding-left: 750px;
     font-weight: lighter;
     padding-top: 370px;
@@ -112,7 +112,8 @@ body {
 @media screen and (max-width: 1200px) {
     .jumbotron h1 {
 
-        padding-left: 600px;
+        padding-left: 500px;
+        padding-bottom: 200px;
 
     }
 }
@@ -121,7 +122,7 @@ body {
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
     .jumbotron h1 {
-
+        padding-bottom: 300px;
         padding-left: 500px;
 
     }
@@ -132,7 +133,7 @@ body {
 /* for sreens size from 650px and down */
 @media screen and (max-width: 650px) {
     .jumbotron h1 {
-
+        color: white;
         margin: 0;
         padding: 0;
         justify-content: center;
@@ -145,8 +146,9 @@ body {
 /* for sreens size from 450px and down */
 @media screen and (max-width: 450px) {
     .jumbotron h1 {
-        font-size: 20px;
+        font-size: 30px;
         justify-content: center;
+        color: white;
         margin: 0;
         padding: 0;
         margin-top: 50px;
