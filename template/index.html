@@ -18,7 +18,7 @@
 
     <!--Nav-->
     <nav class="navbar navbar-light navbar-expand-sm ">
-        <a href="/" class="navbar-brand">
+        <a href="/template/index.html" class="navbar-brand">
             WEvolve <i class="fa-solid fa-yin-yang"></i></a>
 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -27,10 +27,22 @@
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-                <li class="active nav-item mr-2"><a class="nav-link" href="/" id="contacts">Contacts</a></li>
-                <li class="nav-item mr-2"><a class="nav-link" href="/" id="about">About</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="contacts"> Contacts </a>
+                
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item"><i class="fa-solid fa-phone"></i> 555-357-68-25</a>
+                    <a class="dropdown-item"><i class="fa-solid fa-envelope"></i> WEvolve@gmail.com</a>
+                    <a class="dropdown-item" href="https://www.instagram.com" aria-label="Visit our Instagram (opens in a new tab)"
+                    target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="dropdown-item" href="https://www.facebook.com" aria-label="Visit our Facebook (opens in a new tab)" target="_blank"
+                    rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                </li>
+                <li class="nav-item mr-2"><a class="nav-link" href="/template/about.html" id="about">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Mental health issues
                     </a>
@@ -40,7 +52,8 @@
                         <a class="dropdown-item" href="/">Holistic health</a>
                     </div>
                 </li>
-                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book an appointment</a></li>
+                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book an appointment</a>
+                </li>
                 <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="">Sign In / Sign Up</a></li>
             </ul>
         </div>
@@ -57,12 +70,13 @@
         <div class="opaque-overlay">&nbsp;</div>
         <div class="row">
             <div class="col-12">
-                <section class="callout jumbotron text-center">
-                    <h1 class="jumbotron-header">Leave that dark place...<br> happiness is here!</h1>
+                <section class="callout motto text-center">
+                    <h1 class="motto-header">Leave that dark place...<br> happiness is here!</h1>
                 </section>
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

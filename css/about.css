@@ -23,7 +23,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    
+    background-color: rgba(255, 255, 255, 0.4);
 
 }
 
@@ -67,7 +67,7 @@ body {
 
 
 #navbarDropdownMenuLink,
-#about, #contacts {
+#about {
 
     color: #4B0082;
     font-weight: lighter;
@@ -100,22 +100,29 @@ body {
 
 /* Motto */
 
-.motto {
+.heading {
     background-color: transparent;
-}
-
-.motto h1 {
-    color: #aa7fc2;
-    padding-left: 750px;
+    color: #85131C;
+    padding-left: 50px;
+    padding-right: 25px;
     font-weight: lighter;
-    padding-top: 350px;
+    font-size: 25px;
+    padding-top: 50px;
+    text-align: center;
 
+}
+.info {
+    font-size: 20px;
+    color: #46060b;
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
-    .motto h1 {
+    .heading h1 {
 
         padding-left: 510px;
         padding-top: 300px;
@@ -126,7 +133,7 @@ body {
 /* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
-    .motto h1 {
+    .heading h1 {
         padding-top: 300px;
         padding-left: 450px;
 
@@ -137,8 +144,8 @@ body {
 /* media queries */
 /* for sreens size from 700px and down */
 @media screen and (max-width: 700px) {
-    .motto h1 {
-        color: white;
+    .heading h1 {
+        
         margin: 0;
         padding: 0;
         padding-top: 50px;
@@ -151,10 +158,10 @@ body {
 /* media queries */
 /* for sreens size from 450px and down */
 @media screen and (max-width: 450px) {
-    .motto h1 {
+    .heading {
         font-size: 30px;
         justify-content: center;
-        color: white;
+       
         margin: 0;
         padding: 0;
         margin-top: 50px;
