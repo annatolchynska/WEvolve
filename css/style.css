@@ -7,7 +7,7 @@ body {
 
 .callout-container {
     height: 100vh;
-    background: url('../images/landingpage.jpg') no-repeat bottom right fixed;
+    background: url('../images/landingpage.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -76,8 +76,16 @@ body {
 }
 
 .navbar .navbar-nav a {
-    font-weight: bold;
-    color: #ffc8dd;
+    font-weight: lighter;
+    color: #4B0082;
+
+}
+
+.dropdown-item {
+
+    padding: 3px, 3px;
+
+
 }
 
 #inline {
