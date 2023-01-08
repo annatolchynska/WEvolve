@@ -82,6 +82,32 @@ body {
     font-weight: lighter;
 }
 
+#emblem {
+    
+    color:white;
+    font-size: 35px;
+   
+}
+#icon {
+    animation: rotation 4s infinite linear;
+    text-shadow: 2px 2px 4px #aa7fc2;
+    
+
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  #description {
+    color:#aa7fc2;
+    text-shadow: 2px 2px 4px white;
+    font-size: 30px;
+  }
+    
 /* Motto */
 
 .motto {
@@ -90,10 +116,11 @@ body {
 
 .motto-header {
     color: #aa7fc2;
+    text-shadow: 2px 2px 4px white;
     padding-left: 750px;
     font-weight: lighter;
     padding-top: 350px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .motto-header span {
@@ -184,7 +211,7 @@ body {
 @media screen and (max-width: 1200px) {
     .motto-header {
 
-        padding-left: 510px;
+        padding-left: 550px;
         padding-top: 300px;
 
     }
@@ -206,6 +233,7 @@ body {
 @media screen and (max-width: 700px) {
     .motto-header {
         color: white;
+        text-shadow: 2px 2px 4px #aa7fc2;
         margin: 0;
         padding: 0;
         padding-top: 50px;
@@ -219,9 +247,10 @@ body {
 /* for sreens size from 450px and down */
 @media screen and (max-width: 450px) {
     .motto-header {
-        font-size: 30px;
+        font-size: 20px;
         justify-content: center;
         color: white;
+        text-shadow: 2px 2px 4px #aa7fc2;
         margin: 0;
         padding: 0;
         margin-top: 50px;
