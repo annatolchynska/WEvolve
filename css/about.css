@@ -7,7 +7,7 @@ body {
 
 .callout-container {
     height: 100vh;
-    background: url('../images/landingpage.jpg') no-repeat center center fixed;
+    background: url('../images/zen.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,16 +15,6 @@ body {
 
     display: flex;
     position: relative;
-}
-
-.opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-
 }
 
 .content-container {
@@ -40,7 +30,7 @@ body {
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(170, 240, 209, 0.3);
+    background-color: rgba(97, 247, 179, 0.3);
 }
 
 
@@ -122,20 +112,32 @@ body {
     background-color: transparent;
     color: #85131C;
     padding-left: 50px;
-    padding-right: 25px;
+    padding-right: 300px;
     font-weight: lighter;
     font-size: 25px;
     padding-top: 30px;
-    text-align: center;
+    text-align: justify;}
+   
 
-}
-.info {
-    font-size: 20px;
-    color: #46060b;
-    text-align: justify;
-    padding-left: 25px;
-    padding-right: 25px;
-}
+.card {
+    box-shadow: 5 4 8px 3px gray; 
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+ 
+  
+  .column-33 {
+    float: right;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  .column-66 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
 
 /* media queries */
 /* for sreens size from 1200px and down */
@@ -174,15 +176,17 @@ body {
 }
 .callout-container {
     height: 100%;
-    background: url('../images/landingpage.jpg') no-repeat center center scroll;
+    background: url('../images/zen.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
     display: flex;
-    position: relative;
+    position: 
+    relative;
 }
+
 
 /* media queries */
 /* for sreens size from 450px and down */
@@ -195,12 +199,10 @@ body {
         margin-top: 50px;
 
     }
-    .info {
-        font-size: 20px;
-    }
+    
     .callout-container {
         height: 100%;
-        background: url('../images/landingpage.jpg') no-repeat center center scroll;
+        background: url('../images/zen.jpg') no-repeat center center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -208,5 +210,11 @@ body {
     
         display: flex;
         position: relative;
+    }
+    
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
     }
 } 
