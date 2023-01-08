@@ -30,7 +30,8 @@ body {
 .content-container {
     padding-top: 75px;
     padding-bottom: 75px;
-}
+} 
+
 
 /* Navbar */
 
@@ -90,7 +91,32 @@ body {
     font-weight: lighter;
 }
 
-/* Motto */
+#emblem {
+
+    color: white;
+    font-size: 35px;
+
+}
+
+#icon {
+    animation: rotation 4s infinite linear;
+    text-shadow: 2px 2px 4px #aa7fc2;
+
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* description */
+
 
 .heading {
     background-color: transparent;
@@ -99,7 +125,7 @@ body {
     padding-right: 25px;
     font-weight: lighter;
     font-size: 25px;
-    padding-top: 50px;
+    padding-top: 30px;
     text-align: center;
 
 }
@@ -183,4 +209,4 @@ body {
         display: flex;
         position: relative;
     }
-}
+} 

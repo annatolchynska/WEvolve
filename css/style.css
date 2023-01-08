@@ -83,31 +83,35 @@ body {
 }
 
 #emblem {
-    
-    color:white;
+
+    color: white;
     font-size: 35px;
-   
+
 }
+
 #icon {
     animation: rotation 4s infinite linear;
     text-shadow: 2px 2px 4px #aa7fc2;
-    
+
 
 }
+
 @keyframes rotation {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform: rotate(359deg);
+        transform: rotate(359deg);
     }
-  }
-  #description {
-    color:#aa7fc2;
+}
+
+#description {
+    color: #aa7fc2;
     text-shadow: 2px 2px 4px white;
     font-size: 30px;
-  }
-    
+}
+
 /* Motto */
 
 .motto {
@@ -173,6 +177,7 @@ body {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
+
 .motto-header span:nth-of-type(10) {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
