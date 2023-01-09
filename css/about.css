@@ -14,13 +14,16 @@ body {
     background-size: cover;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
 }
 
 .content-container {
     padding-top: 75px;
     padding-bottom: 75px;
-} 
+}
 
 
 /* Navbar */
@@ -30,7 +33,7 @@ body {
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(97, 247, 179, 0.3);
+    background-color: rgba(203, 202, 204, 0.3);
 }
 
 
@@ -50,7 +53,8 @@ body {
 
 
 #navbarDropdownMenuLink,
-#about, #contacts {
+#about,
+#contacts {
 
     color: #4B0082;
     font-weight: lighter;
@@ -81,17 +85,93 @@ body {
     font-weight: lighter;
 }
 
-#emblem {
-
+.wevolve {
     color: white;
-    font-size: 35px;
-
+    font-size: 50px;
+    text-shadow: 6px 6px 8px #bbfafc;
+    margin-right: 500px;
+    padding-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
+
+.wevolve span {
+    display: inline-block;
+    -webkit-animation: wave-text 4s ease-in-out infinite;
+    animation: wave-text 4s ease-in-out infinite;
+}
+
+.wevolve span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.wevolve span:nth-of-type(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.wevolve span:nth-of-type(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.wevolve span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.wevolve span:nth-of-type(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.wevolve span:nth-of-type(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.wevolve span:nth-of-type(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+@-webkit-keyframes wave-text {
+    00% {
+        transform: translateY(0.2em);
+    }
+
+    60% {
+        transform: translateY(-0.3em);
+    }
+
+    100% {
+        transform: translateY(0.2em);
+    }
+}
+
+@keyframes wave-text {
+    00% {
+        transform: translateY(0.2em);
+    }
+
+    60% {
+        transform: translateY(-0.3em);
+    }
+
+    100% {
+        transform: translateY(0.2em);
+    }
+}
+
 
 #icon {
     animation: rotation 4s infinite linear;
-    text-shadow: 2px 2px 4px #aa7fc2;
-
+    text-shadow: 6px 6px 8px #bbfafc;
+    color: white;
+    font-size: 50px;
+    margin-right: 500px;
+    padding-bottom: 20px;
 
 }
 
@@ -108,98 +188,67 @@ body {
 /* description */
 
 
-.heading {
-    background-color: transparent;
-    color: #85131C;
-    padding-left: 50px;
-    padding-right: 300px;
-    font-weight: lighter;
-    font-size: 25px;
-    padding-top: 30px;
-    text-align: justify;}
-   
 
-.card {
-    box-shadow: 5 4 8px 3px gray; 
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
- 
-  
-  .column-33 {
-    float: right;
-    width: 33.33333%;
-    padding: 20px;
-  }
-  .column-66 {
-    float: left;
-    width: 33.33333%;
-    padding: 20px;
-  }
-  
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron .lead {
+
+    padding-right: 500px;
+    text-align: justify;
+    color: #400832;
+}
+
 
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
-    .heading h1 {
 
-        padding-left: 510px;
-        padding-top: 300px;
+    .jumbotron .lead {
 
+        padding-right: 340px;
+
+    }
+
+    #icon {
+        margin-right: 400px;
     }
 }
 
 /* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
-    .heading h1 {
-        padding-top: 300px;
-        padding-left: 450px;
+
+    .jumbotron .lead {
+
+        padding-right: 300px;
 
     }
 
-}
-
-/* media queries */
-/* for sreens size from 700px and down */
-@media screen and (max-width: 700px) {
-    .heading h1 {
-        
-        margin: 0;
-        padding: 0;
-        padding-top: 50px;
-        justify-content: center;
-
+    #icon {
+        margin-right: 300px;
     }
-
 }
-.callout-container {
-    height: 100%;
-    background: url('../images/zen.jpg') no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
-    display: flex;
-    position: 
-    relative;
-}
 
 
 /* media queries */
-/* for sreens size from 450px and down */
-@media screen and (max-width: 450px) {
-    .heading {
-        font-size: 20px;
-        justify-content: center;
-               margin: 0;
-        padding: 0;
-        margin-top: 50px;
+/* for sreens size from 780px and down */
+@media screen and (max-width: 730px) {
+
+    .jumbotron .lead {
+
+        padding-right: 100px;
 
     }
-    
+
+    #icon {
+        margin-right: 50px;
+    }
+
+
+
     .callout-container {
         height: 100%;
         background: url('../images/zen.jpg') no-repeat center center scroll;
@@ -207,14 +256,41 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-    
+
         display: flex;
-        position: relative;
+        position:
+            relative;
     }
-    
-    .column-66,
-    .column-33 {
-      width: 100%;
-      text-align: center;
+
+
+    /* media queries */
+    /* for sreens size from 450px and down */
+    @media screen and (max-width: 450px) {
+
+        .callout-container {
+            height: 100%;
+            background: url('../images/zen.jpg') no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+            display: flex;
+            position: relative;
+        }
+
+        .jumbotron .lead {
+
+            text-align: justify;
+            margin: 0;
+            padding: 10px;
+
+        }
+
+
+        #icon {
+            justify-content: center;
+        }
+
     }
-} 
+}
