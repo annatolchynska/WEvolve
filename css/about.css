@@ -88,9 +88,10 @@ body {
 .wevolve {
     color: white;
     font-size: 50px;
-    text-shadow: 6px 6px 8px #bbfafc;
+    text-shadow: 1px 1px 1px gray;
     margin-right: 500px;
     padding-top: 100px;
+    margin-top: 20px;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -167,8 +168,8 @@ body {
 
 #icon {
     animation: rotation 4s infinite linear;
-    text-shadow: 6px 6px 8px #bbfafc;
-    color: white;
+        color: gray;
+        text-shadow: 1px 1px 1px white;
     font-size: 50px;
     margin-right: 500px;
     padding-bottom: 20px;
@@ -214,6 +215,10 @@ body {
     #icon {
         margin-right: 400px;
     }
+    .wevolve {
+        margin-right: 400px;
+        font-size: 40px;
+    }
 }
 
 /* media queries */
@@ -225,16 +230,33 @@ body {
         padding-right: 300px;
 
     }
+    .callout-container {
+        height: 100%;
+        background: url('../images/zen.jpg') no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        display: flex;
+        position:
+            relative;
+    }
 
     #icon {
         margin-right: 300px;
+    }
+    .wevolve {
+        margin-right: 300px;
+       
+        padding-top: 10px;
     }
 }
 
 
 
 /* media queries */
-/* for sreens size from 780px and down */
+/* for sreens size from 730px and down */
 @media screen and (max-width: 730px) {
 
     .jumbotron .lead {
@@ -246,7 +268,9 @@ body {
     #icon {
         margin-right: 50px;
     }
-
+    .wevolve {
+        margin-right: 50px;
+    }
 
 
     .callout-container {
@@ -290,6 +314,14 @@ body {
 
         #icon {
             justify-content: center;
+            font-size: 30px;
+            text-shadow: none;
+            color: gray;
+        }
+        .wevolve {
+            justify-content: center;
+            text-shadow: 1px 1px 2px #bbfafc;
+            font-size: 20px;
         }
 
     }
