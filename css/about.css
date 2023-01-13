@@ -89,7 +89,7 @@ body {
     color: white;
     font-size: 50px;
     text-shadow: 1px 1px 1px gray;
-    margin-right: 500px;
+   
     padding-top: 100px;
     margin-top: 20px;
     margin-bottom: 0;
@@ -171,7 +171,7 @@ body {
         color: gray;
         text-shadow: 1px 1px 1px white;
     font-size: 50px;
-    margin-right: 500px;
+    
     padding-bottom: 20px;
 
 }
@@ -196,7 +196,7 @@ body {
 
 .jumbotron .lead {
 
-    padding-right: 500px;
+    
     text-align: justify;
     color: #400832;
 }

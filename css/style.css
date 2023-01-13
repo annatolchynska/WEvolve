@@ -108,7 +108,7 @@ body {
 }
 
 #description {
-    color: #aa7fc2;
+    color: #9f54c8;
     text-shadow: 2px 2px 4px white;
     font-size: 30px;
     padding-left: 150px;
@@ -121,12 +121,12 @@ body {
 }
 
 .motto-header {
-    color: #aa7fc2;
+    color: #9031c3;;
     text-shadow: 2px 2px 4px white;
     padding-left: 750px;
     font-weight: lighter;
     padding-top: 350px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .motto-header span {
@@ -230,6 +230,7 @@ body {
     .motto-header {
         padding-top: 300px;
         padding-left: 450px;
+        font-size: 30px;
 
     }
     #description, #emblem  {
