@@ -6,18 +6,17 @@ body {
 
 
 .callout-container {
-    height: 100vh;
-    background: url('../images/zen.jpg') no-repeat center center fixed;
+    height: 100%;
+    background: url('../images/about.webp') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position:
+        relative;
 
-    position: relative;
 }
 
 .content-container {
@@ -33,18 +32,19 @@ body {
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(203, 202, 204, 0.3);
+    background-color: rgba(35, 39, 40, 0.6);
 }
 
 
 .navbar .navbar-brand {
 
-    color: #85131C;
+    color: white;
+   
 }
 
 .navbar .navbar-brand:hover {
 
-    color: #4B0082;
+    color: white;
 }
 
 .navbar .navbar-toggler {
@@ -56,14 +56,14 @@ body {
 #about,
 #contacts {
 
-    color: #4B0082;
+    color: white;
     font-weight: lighter;
     font-size: 14px;
 }
 
 .navbar .navbar-nav a {
     font-weight: lighter;
-    color: #4B0082;
+    color: rgb(94, 155, 58);
 
 }
 
@@ -74,26 +74,26 @@ body {
 
 #inline {
 
-    color: #85131C;
+    color: rgb(94, 155, 58);
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 16px;
+    text-shadow:1px 1px 1px white;
+   
 }
 
 #booking {
-    color: #4B0082;
+    color: white;
     font-size: larger;
     font-weight: lighter;
 }
 
 .wevolve {
-    color: white;
+    color: rgb(94, 155, 58);
     font-size: 50px;
-    text-shadow: 1px 1px 1px gray;
+    text-shadow: 1px 1px 1px white;
+    
    
-    padding-top: 100px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    
 }
 
 .wevolve span {
@@ -139,37 +139,41 @@ body {
 
 @-webkit-keyframes wave-text {
     00% {
-        transform: translateY(0.2em);
+        transform: translateY(-0.2em);
     }
 
     60% {
-        transform: translateY(-0.3em);
+        transform: translateY(0.1em);
     }
 
     100% {
-        transform: translateY(0.2em);
+        transform: translateY(-0.2em);
     }
 }
 
 @keyframes wave-text {
     00% {
-        transform: translateY(0.2em);
+        transform: translateY(-0.2em);
     }
 
     60% {
-        transform: translateY(-0.3em);
+        transform: translateY(0.3em);
     }
 
     100% {
-        transform: translateY(0.2em);
+        transform: translateY(-0.2em);
     }
 }
+.block-divider {
+    width: 250px;
+    height: 1px;
 
+    background-color: rgb(94, 155, 58);}
 
 #icon {
     animation: rotation 4s infinite linear;
-        color: gray;
-        text-shadow: 1px 1px 1px white;
+        color: white;
+        text-shadow: 1px 2px 1px rgb(94, 155, 58);
     font-size: 50px;
     
     padding-bottom: 20px;
@@ -188,7 +192,11 @@ body {
 
 /* description */
 
+#question {
+    font-size: 30px;
+    text-align: center;
 
+}
 
 .jumbotron {
     background-color: transparent;
@@ -196,9 +204,9 @@ body {
 
 .jumbotron .lead {
 
-    
+    font-size: 25px;
     text-align: justify;
-    color: #400832;
+    color: white;
 }
 
 
@@ -206,33 +214,17 @@ body {
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
 
-    .jumbotron .lead {
-
-        padding-right: 340px;
-
-    }
-
-    #icon {
-        margin-right: 400px;
-    }
-    .wevolve {
-        margin-right: 400px;
-        font-size: 40px;
-    }
 }
 
+    
 /* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
 
-    .jumbotron .lead {
-
-        padding-right: 300px;
-
-    }
+   
     .callout-container {
         height: 100%;
-        background: url('../images/zen.jpg') no-repeat center center scroll;
+        background: url('../images/about.webp') no-repeat center center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -243,15 +235,7 @@ body {
             relative;
     }
 
-    #icon {
-        margin-right: 300px;
-    }
-    .wevolve {
-        margin-right: 300px;
-       
-        padding-top: 10px;
-    }
-}
+   }
 
 
 
@@ -259,23 +243,27 @@ body {
 /* for sreens size from 730px and down */
 @media screen and (max-width: 730px) {
 
+    #question {
+        font-size: 25px;
+    }
+
     .jumbotron .lead {
 
-        padding-right: 100px;
+        text-align: justify;
+        margin: 0;
+        padding: 20px;
+        font-size: 20px;
 
     }
-
     #icon {
-        margin-right: 50px;
+        justify-content: center;
+        font-size: 30px;
+       text-shadow: none;
     }
-    .wevolve {
-        margin-right: 50px;
-    }
-
 
     .callout-container {
         height: 100%;
-        background: url('../images/zen.jpg') no-repeat center center scroll;
+        background: url('../images/about.webp') no-repeat center center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -293,7 +281,7 @@ body {
 
         .callout-container {
             height: 100%;
-            background: url('../images/zen.jpg') no-repeat center center scroll;
+            background: url('../images/about.webp') no-repeat center center scroll;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -310,18 +298,19 @@ body {
             padding: 10px;
 
         }
-
+.block-divider {
+    width: 75px;
+    height: 2px;
+}
 
         #icon {
             justify-content: center;
             font-size: 30px;
-            text-shadow: none;
-            color: gray;
+           text-shadow: none;
         }
         .wevolve {
-            justify-content: center;
-            text-shadow: 1px 1px 2px #bbfafc;
-            font-size: 20px;
+            
+            font-size: 30px;
         }
 
     }
