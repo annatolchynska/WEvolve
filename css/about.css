@@ -208,6 +208,10 @@ body {
     text-align: justify;
     color: white;
 }
+#quote {
+    text-align: center;
+    font-size: 30px;
+}
 
 
 /* media queries */
