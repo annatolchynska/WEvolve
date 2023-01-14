@@ -1,0 +1,203 @@
+body {
+    font-family: 'Yeon Sung', serif;
+}
+.callout-container {
+    height: 100%;
+    background: url('../images/bamboo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    position: absolute;
+    
+
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+.jumbotron .lead {
+
+    font-size: 25px;
+    text-align: justify;
+    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+   
+}
+
+.buddha {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    
+}
+
+
+.buddha span {
+    display: inline-block;
+    -webkit-animation: wave-text 4s ease-in-out infinite;
+    animation: wave-text 4s ease-in-out infinite;
+}
+
+.buddha span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.buddha span:nth-of-type(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.buddha span:nth-of-type(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.buddha span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.buddha span:nth-of-type(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.buddha span:nth-of-type(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.buddha span:nth-of-type(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.buddha span:nth-of-type(8) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.buddha span:nth-of-type(9) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.buddha span:nth-of-type(10) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.buddha span:nth-of-type(11) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.buddha span:nth-of-type(12) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+.buddha span:nth-of-type(13) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes wave-text {
+    00% {
+        transform: translateY(-0.2em);
+    }
+
+    60% {
+        transform: translateY(0.1em);
+    }
+
+    100% {
+        transform: translateY(-0.2em);
+    }
+}
+
+@keyframes wave-text {
+    00% {
+        transform: translateY(-0.2em);
+    }
+
+    60% {
+        transform: translateY(0.3em);
+    }
+
+    100% {
+        transform: translateY(-0.2em);
+    }
+}
+
+.block-divider {
+    width: 250px;
+    height: 1px;
+
+    background-color: white;}
+
+
+/*Nav */
+.navbar {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #443c40;
+}
+
+
+.navbar .navbar-brand {
+
+    color: white;
+   
+}
+
+.navbar .navbar-brand:hover {
+
+    color: white;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+
+#navbarDropdownMenuLink,
+#about,
+#contacts {
+
+    color: white;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.navbar .navbar-nav a {
+    font-weight: lighter;
+    color: rgb(94, 155, 58);
+
+}
+
+.dropdown-menu {
+
+    margin: 2px;
+}
+.navbar .navbar-toggler {
+    border: 0;
+    color: white;
+}
+#inline {
+
+    color: rgb(191, 178, 187);
+    font-weight: lighter;
+    font-size: 16px;
+   
+   
+}
+
+#booking {
+    color: white;
+    font-size: larger;
+    font-weight: lighter;
+}
