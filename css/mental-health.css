@@ -1,6 +1,7 @@
 body {
     font-family: 'Yeon Sung', serif;
 }
+
 .callout-container {
     height: 100%;
     background: url('../images/bamboo.jpg') no-repeat center center fixed;
@@ -10,30 +11,34 @@ body {
     background-size: cover;
 
     display: flex;
-    position: absolute;
-    
+    position: relative;
+
 
 }
 
 .jumbotron {
     background-color: transparent;
 }
+
 .jumbotron .lead {
 
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
-    color: black;
-    padding-left: 30px;
+    color: white;
+    padding-left: 50px;
     padding-right: 30px;
-    
-   
+    padding-top: 30px;
+    text-shadow: 1px 1px 1px black;
+
+
 }
 
 .buddha {
     text-align: center;
     font-size: 30px;
     color: white;
-    
+    text-shadow: 1px 2px 2px black;
+
 }
 
 
@@ -82,22 +87,27 @@ body {
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
 }
+
 .buddha span:nth-of-type(9) {
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
+
 .buddha span:nth-of-type(10) {
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
+
 .buddha span:nth-of-type(11) {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
+
 .buddha span:nth-of-type(12) {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
+
 .buddha span:nth-of-type(13) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
@@ -135,7 +145,8 @@ body {
     width: 250px;
     height: 1px;
 
-    background-color: white;}
+    background-color: black;
+}
 
 
 /*Nav */
@@ -151,7 +162,7 @@ body {
 .navbar .navbar-brand {
 
     color: white;
-   
+
 }
 
 .navbar .navbar-brand:hover {
@@ -183,21 +194,64 @@ body {
 
     margin: 2px;
 }
+
 .navbar .navbar-toggler {
     border: 0;
     color: white;
 }
+
 #inline {
 
     color: rgb(191, 178, 187);
     font-weight: lighter;
     font-size: 16px;
-   
-   
+
+
 }
 
 #booking {
     color: white;
     font-size: larger;
     font-weight: lighter;
+}
+
+/* media queries */
+/* for sreens size from 730px and down */
+@media screen and (max-width: 730px) {
+
+    .jumbotron .lead {
+
+        padding: 20px;
+        font-size: 20px;
+
+    }
+    .block-divider {
+        width: 50px;
+        height: 1px;
+    }
+
+    /* media queries */
+    /* for sreens size from 450px and down */
+    @media screen and (max-width: 450px) {
+        .buddha {
+
+            font-size: 20px;
+
+
+        }
+
+        .jumbotron .lead {
+
+            font-size: 18px;
+            padding: 15px;
+
+        }
+
+        .block-divider {
+            width: 50px;
+            height: 1px;
+        }
+
+
+    }
 }

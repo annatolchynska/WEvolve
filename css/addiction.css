@@ -152,7 +152,7 @@ body {
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(35, 39, 40, 0.6);
+    background-color: #443c40;
 }
 
 
@@ -194,10 +194,10 @@ body {
 
 #inline {
 
-    color: rgb(145, 41, 23);
+    color: rgb(245, 145, 127);
     font-weight: lighter;
     font-size: 16px;
-    text-shadow:1px 1px 1px white;
+  
    
 }
 
@@ -205,4 +205,44 @@ body {
     color: white;
     font-size: larger;
     font-weight: lighter;
+}
+/* media queries */
+/* for sreens size from 730px and down */
+@media screen and (max-width: 730px) {
+
+    .jumbotron .lead {
+
+        padding: 20px;
+        font-size: 20px;
+
+    }
+    .block-divider {
+        width: 50px;
+        height: 1px;
+    }
+
+    /* media queries */
+    /* for sreens size from 450px and down */
+    @media screen and (max-width: 450px) {
+        .buddha {
+
+            font-size: 20px;
+
+
+        }
+
+        .jumbotron .lead {
+
+            font-size: 18px;
+            padding: 15px;
+
+        }
+
+        .block-divider {
+            width: 50px;
+            height: 1px;
+        }
+
+
+    }
 }
