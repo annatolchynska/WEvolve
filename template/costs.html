@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental health awareness</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/5d093ab506.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/mental-health.css">
+    <link rel="stylesheet" href="/css/costs.css">
 </head>
 
 <body>
-
-    <!--Nav-->
+    <!--the idea of the code was taken from https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4-->
+    <!--Nav menu-->
+    <!--name and logo link-->
     <nav class="navbar navbar-light navbar-expand-sm ">
-        <!--name and logo link to the landing page-->
         <a href="/template/index.html" class="navbar-brand">
             WEvolve <i class="fa-solid fa-yin-yang"></i></a>
 
@@ -29,8 +29,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" id="contacts"> Contacts </a>
+                    <a class="nav-link dropdown-toggle" id="contacts" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> Contacts </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item"><i class="fa-solid fa-phone"></i> 555-357-68-25</a>
@@ -43,7 +43,6 @@
                             with us on <i class="fa-brands fa-facebook"></i></a>
                     </div>
                 </li>
-                <!--link to the about page-->
                 <li class="nav-item mr-2"><a class="nav-link" href="/template/about.html" id="about">About</a></li>
                 <!--mental health issues menu-->
                 <li class="nav-item dropdown">
@@ -69,71 +68,47 @@
             </p>
             <a href="/login" id="booking">Book an appointment</a>
         </div>
-
     </nav>
     <!--main header-->
     <div class="container-fluid callout-container">
         <div class="row">
-            <!--floating quote-->
-            <div class="callout jumbotron text-center">
-                <div class="buddha">
-                    <span>The</span>
-                    <span>past is</span>
-                    <span>where</span>
-                    <span>you</span>
-                    <span>learn</span>
-                    <span>the</span>
-                    <span>lessons.</span>
-                    <span>The</span>
-                    <span>future is</span>
-                    <span>where</span>
-                    <span>you</span>
-                    <span>apply</span>
-                    <span>them..</span>
-                </div>
-                <!--main description-->
-                <p class="lead">
-                    Mental and physical health are equally important components of overall
-                    health.<br>
-                    Whatever trauma you had in your past, it doesn't have to determine your future.
-                    Difficult past experiences come with an emotional charge. Either you are REliving them or you are
-                    REmembering them. Our best therapists at WEvolve make sure all your past memories are processed and
-                    dealt with the right way. So then, the past becomes just that: a memory.
-                </p>
-                <!--rotating icon-->
-                <span> <i class="fa-solid fa-yin-yang" id="icon"></i></span>
-                <p class="lead">
-                    To determine a diagnosis and check for related complications you may have due to mental disorder,
-                    our best specialists make: a physical exam, lab tests, a psychological evaluation.<br>
-                    We specialize in treating mental health disorders, such as: Depression, Bipolar disorder, Dysthymia,
-                    Trauma, Anxiety, panic attacks, Chronic pain syndrome, Emotional crisis, Mood
-                    disorders &amp; depression, Sleeping disorders, Isolation &amp; emptiness, selfharm,
-                    suicidal thoughts, Relation &amp; communication, Chronic fatique, Severe anxiety;
-                    Eating disorders; burnout; stress disorders, personality disorder and other.<br>
-                </p>
-                <hr class="block-divider">
-                <p class="lead">
-                    Sometimes it's difficult to find out which mental
-                    illness may be causing your symptoms. But taking the
-                    time and effort to get an accurate diagnosis will help
-                    determine the appropriate treatment.
-                </p>
-                <p class="lead">
-                    Mental health issues are not permanent. The process that you are going through is the only
-                    thing that permanent.
-                </p>
-                <p class="lead">
-                    Our calm and peaceful residences will serve as a private, tranquil and
-                    safe environment where you can let go of your past and future concerns,
-                    and start working on yourself now.
-                </p>
-                <!--link to the start of the page-->
-                <a href="/template/mental-health.html"><i class="fa-solid fa-yin-yang" id="home"></i></a>
+            <!--the name-->
+            <div class="col-12">
+                <section class="callout motto">
+                    <div class="wevolve">
+                        <span>Don't</span>
+                        <span>let</span>
+                        <span>yourself</span>
+                        <span>be controlled</span>
+                        <span>by people,</span>
+                        <span>money and</span>
+                        <span>past experiences</span>
+                    </div>
+                    <span> <i class="fa-solid fa-vihara" id="pagoda"></i></span>
+                    <!--description text-->
+                    <h1 class="residence">Our calm and peaceful residences, situated in the middle of the wild nature,
+                        will serve as a private, tranquil and
+                        safe environment where you can let go of your past and future concerns,
+                        and start working on yourself now.</h1>
+                        <hr class="block-divider">
+                    <p class="lead">For all treatments, we recommend at least 3 weeks of an intensive residential program: to
+                        do all medical and psychological testing and implement effective treatment. <br>Week one focuses on
+                        tests and detox; weeks 2-4 are where the intensive treatment happens and the program is adjusted
+                        as we go. The aftercare program would be further weekly online support for some another time when you are back
+                        home.</p>
+                    <div class="d-flex flex-column">
+                        <div class="p-2">One week treatment - from 1000$</div>
+                        <div class="p-2">Two weeks treatment - from 2000$</div>
+                        <div class="p-2">Month treatment - from 3500$</div>
+                        <div class="p-2">Online treatment - from 500$</div>
+                    </div>
+                    <!--link to the start of the page-->
+                    <a href="/template/costs.html"><i class="fa-solid fa-yin-yang" id="home"></i></a>
             </div>
+            </section>
         </div>
     </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
