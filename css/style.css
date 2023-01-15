@@ -1,11 +1,12 @@
 body {
+
     font-family: 'Yeon Sung', serif;
+
 }
 
-/* Containers */
-
-
+/* main header*/
 .callout-container {
+
     height: 100vh;
     background: url('../images/landingpage.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -18,20 +19,22 @@ body {
 }
 
 .content-container {
+
     padding-top: 75px;
     padding-bottom: 75px;
+
 }
 
-/* Navbar */
-
+/* Navbar menu */
 .navbar {
+
     margin: 0;
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
     background-color: rgba(170, 240, 209, 0.3);
-}
 
+}
 
 .navbar .navbar-brand {
 
@@ -41,13 +44,14 @@ body {
 .navbar .navbar-brand:hover {
 
     color: #4B0082;
-}
 
+}
 
 .navbar .navbar-toggler {
-    border: 0;
-}
 
+    border: 0;
+
+}
 
 #navbarDropdownMenuLink,
 #about,
@@ -56,9 +60,11 @@ body {
     color: #4B0082;
     font-weight: lighter;
     font-size: 14px;
+
 }
 
 .navbar .navbar-nav a {
+
     font-weight: lighter;
     color: #4B0082;
 
@@ -67,6 +73,7 @@ body {
 .dropdown-menu {
 
     margin: 2px;
+
 }
 
 #inline {
@@ -74,12 +81,15 @@ body {
     color: #85131C;
     font-weight: lighter;
     font-size: 14px;
+
 }
 
 #booking {
+
     color: #4B0082;
     font-size: larger;
     font-weight: lighter;
+
 }
 
 #emblem {
@@ -90,10 +100,11 @@ body {
 
 }
 
+/*rotating icon*/
 #icon {
+
     animation: rotation 4s infinite linear;
     text-shadow: 2px 2px 4px #aa7fc2;
-
 
 }
 
@@ -108,84 +119,114 @@ body {
 }
 
 #description {
+
     color: #9f54c8;
     text-shadow: 2px 2px 4px white;
     font-size: 30px;
     padding-left: 150px;
+
 }
 
-/* Motto */
-
+/* floating motto */
+/*the idea was taken from https://codeconvey.com/text-wave-effect-css/*/
 .motto {
+
     background-color: transparent;
+
 }
 
 .motto-header {
-    color: #9031c3;;
+
+    color: #9031c3;
+    ;
     text-shadow: 2px 2px 4px white;
     padding-left: 750px;
     font-weight: lighter;
     padding-top: 350px;
     font-size: 35px;
+
 }
 
 .motto-header span {
+
     display: inline-block;
     -webkit-animation: wave-text 4s ease-in-out infinite;
     animation: wave-text 4s ease-in-out infinite;
+
 }
 
 .motto-header span:nth-of-type(1) {
+
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
+
 }
 
 .motto-header span:nth-of-type(2) {
+
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+
 }
 
 .motto-header span:nth-of-type(3) {
+
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+
 }
 
 .motto-header span:nth-of-type(4) {
+
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+
 }
 
 .motto-header span:nth-of-type(5) {
+
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
+
 }
 
 .motto-header span:nth-of-type(6) {
+
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
+
 }
 
 .motto-header span:nth-of-type(7) {
+
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+
 }
 
 .motto-header span:nth-of-type(8) {
+
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+
 }
 
 .motto-header span:nth-of-type(9) {
+
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+
 }
 
 .motto-header span:nth-of-type(10) {
+
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
+
 }
 
 @-webkit-keyframes wave-text {
+
     00% {
         transform: translateY(0.2em);
     }
@@ -197,9 +238,11 @@ body {
     100% {
         transform: translateY(0.2em);
     }
+
 }
 
 @keyframes wave-text {
+
     00% {
         transform: translateY(0.2em);
     }
@@ -211,15 +254,18 @@ body {
     100% {
         transform: translateY(0.2em);
     }
+
 }
 
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
+
     .motto-header {
 
         padding-left: 550px;
         padding-top: 300px;
+
 
     }
 }
@@ -227,14 +273,20 @@ body {
 /* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
+
     .motto-header {
+
         padding-top: 300px;
         padding-left: 450px;
         font-size: 30px;
 
     }
-    #description, #emblem  {
+
+    #description,
+    #emblem {
+
         padding-left: 0;
+
     }
 
 }
@@ -242,7 +294,9 @@ body {
 /* media queries */
 /* for sreens size from 700px and down */
 @media screen and (max-width: 700px) {
+
     .motto-header {
+
         color: white;
         text-shadow: 2px 2px 4px #aa7fc2;
         margin: 0;
@@ -252,8 +306,12 @@ body {
         font-size: 25px;
 
     }
-    #description, #emblem {
+
+    #description,
+    #emblem {
+
         padding-left: 0;
+
     }
 
 }
@@ -261,7 +319,9 @@ body {
 /* media queries */
 /* for sreens size from 450px and down */
 @media screen and (max-width: 450px) {
+
     .motto-header {
+
         font-size: 20px;
         justify-content: center;
         color: white;
@@ -271,9 +331,13 @@ body {
         margin-top: 50px;
 
     }
-    #description, #emblem {
+
+    #description,
+    #emblem {
+
         padding-left: 0;
         font-size: 25px;
+
     }
 
 }

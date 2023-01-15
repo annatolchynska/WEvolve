@@ -1,22 +1,30 @@
 body {
+
     font-family: 'Yeon Sung', serif;
+
 }
+
+/*main header*/
 .callout-container {
+
     height: 100%;
     background: url('../images/buddha2.webp') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     display: flex;
     position: relative;
 
 }
 
 .jumbotron {
+
     background-color: transparent;
+
 }
+
+/*main description*/
 .jumbotron .lead {
 
     font-size: 25px;
@@ -25,141 +33,203 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     text-shadow: 1px 1px 1px black;
-   
+
 }
+
+/*divider quote*/
 .jumbotron .affirm {
+
     text-align: center;
     color: white;
     font-size: 25px;
     text-shadow: 1px 1px 1px black;
+
 }
 
+/*floating quote*/
+/*the idea was taken from https://codeconvey.com/text-wave-effect-css/*/
 .buddha {
+
     text-align: center;
     font-size: 30px;
     color: white;
     text-shadow: 1px 1px 1px black;
+
 }
 
-
 .buddha span {
+
     display: inline-block;
     -webkit-animation: wave-text 4s ease-in-out infinite;
     animation: wave-text 4s ease-in-out infinite;
+
 }
 
 .buddha span:nth-of-type(1) {
+
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
+
 }
 
 .buddha span:nth-of-type(2) {
+
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+
 }
 
 .buddha span:nth-of-type(3) {
+
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+
 }
 
 .buddha span:nth-of-type(4) {
+
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+
 }
 
 .buddha span:nth-of-type(5) {
+
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
+
 }
 
 .buddha span:nth-of-type(6) {
+
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
+
 }
 
 .buddha span:nth-of-type(7) {
+
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
+
 }
 
 .buddha span:nth-of-type(8) {
+
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
+
 }
+
 .buddha span:nth-of-type(9) {
+
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
+
 }
+
 .buddha span:nth-of-type(10) {
+
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+
 }
+
 .buddha span:nth-of-type(11) {
+
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+
 }
+
 .buddha span:nth-of-type(12) {
+
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+
 }
+
 .buddha span:nth-of-type(13) {
+
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
+
 }
 
 @-webkit-keyframes wave-text {
+
     00% {
+
         transform: translateY(-0.2em);
+
     }
 
     60% {
+
         transform: translateY(0.1em);
+
     }
 
     100% {
+
         transform: translateY(-0.2em);
+
     }
+
 }
 
 @keyframes wave-text {
+
     00% {
+
         transform: translateY(-0.2em);
+
     }
 
     60% {
+
         transform: translateY(0.3em);
+
     }
 
     100% {
+
         transform: translateY(-0.2em);
+
     }
 }
+
+/*name of the description*/
 #cntr {
+
     text-align: center;
     font-size: 30px;
+
 }
+
 .block-divider {
+
     width: 250px;
     height: 1px;
+    background-color: white;
 
-    background-color: white;}
+}
 
-
-/*Nav */
+/*Nav menu*/
 .navbar {
+
     margin: 0;
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
     background-color: #443c40;
-}
 
+}
 
 .navbar .navbar-brand {
 
     color: white;
-   
+
 }
 
 .navbar .navbar-brand:hover {
@@ -168,9 +238,10 @@ body {
 }
 
 .navbar .navbar-toggler {
-    border: 0;
-}
 
+    border: 0;
+
+}
 
 #navbarDropdownMenuLink,
 #about,
@@ -179,9 +250,11 @@ body {
     color: white;
     font-weight: lighter;
     font-size: 14px;
+
 }
 
 .navbar .navbar-nav a {
+
     font-weight: lighter;
     color: rgb(94, 155, 58);
 
@@ -197,15 +270,26 @@ body {
     color: rgb(245, 145, 127);
     font-weight: lighter;
     font-size: 16px;
-  
-   
+
 }
 
 #booking {
+
     color: white;
     font-size: larger;
     font-weight: lighter;
+
 }
+
+#home {
+
+    color: white;
+    padding-top: 50px;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+
+}
+
 /* media queries */
 /* for sreens size from 730px and down */
 @media screen and (max-width: 730px) {
@@ -216,9 +300,12 @@ body {
         font-size: 20px;
 
     }
+
     .block-divider {
+
         width: 50px;
         height: 1px;
+
     }
 
     /* media queries */
@@ -227,7 +314,6 @@ body {
         .buddha {
 
             font-size: 20px;
-
 
         }
 
@@ -239,10 +325,12 @@ body {
         }
 
         .block-divider {
+
             width: 50px;
             height: 1px;
+
         }
 
-
     }
+
 }
