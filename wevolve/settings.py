@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wevolve.wsgi.application'
+WSGI_APPLICATION = 'wevolve-mhc.wsgi.application'
 
 
 # Database
