@@ -1,1 +1,1 @@
-web: gunicorn wevolve.wsgi
+web: gunicorn wevolve-mhc.wsgi
