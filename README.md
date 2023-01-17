@@ -18,7 +18,7 @@ Project purpose is
 
 ### Lucidchart
 
-<img src="./images/lucidchart.jpg">
+<img src="./images/erd.jpg">
 
 ### Data model
 
