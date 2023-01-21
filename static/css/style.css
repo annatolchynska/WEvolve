@@ -243,6 +243,14 @@ body {
 
 }
 
+.footer {
+
+    background-color: rgba(170, 240, 209, 0.3);
+    color: #4B0082;
+    margin: 0;
+    padding: 0;
+    
+}
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
