@@ -39,7 +39,11 @@ Project purpose is
 
 
 ### Bugs and unfixed bugs
+While I was early deploying to Heroku, I got an error and the app wasn't working. 
 
+<img src="./media/error.jpg">
+
+The issue was that the cloudinary storage wasn't install through the terminal. Then it was installed properly and the app successfully was deployed.
 
 ### Deployment
 
