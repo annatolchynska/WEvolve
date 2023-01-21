@@ -8,9 +8,9 @@
 ### Strategy
 
 Project purpose is
-* to provide user mental health issues and treatment info
-* to let user book/reschedule/cancel appointment
-* to let user sign up for mental health treatment package
+* to provide user mental health issues and treatment info;
+* to let user book/reschedule/cancel appointment;
+* to let user sign up for mental health treatment package;
 
 ### User Experience(UX) and Agile method
 
