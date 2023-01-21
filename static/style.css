@@ -138,7 +138,6 @@ body {
 .motto-header {
 
     color: #9031c3;
-    ;
     text-shadow: 2px 2px 4px white;
     padding-left: 750px;
     font-weight: lighter;
@@ -211,19 +210,6 @@ body {
 
 }
 
-.motto-header span:nth-of-type(9) {
-
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-
-}
-
-.motto-header span:nth-of-type(10) {
-
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-
-}
 
 @-webkit-keyframes wave-text {
 
