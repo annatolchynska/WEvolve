@@ -18,7 +18,7 @@ Project purpose is
 
 ### Lucidchart
 
-<img src="./media/erd.jpg">
+<img src="./static/media/erd.jpg">
 
 ### Data model
 
@@ -41,7 +41,7 @@ Project purpose is
 ### Bugs and unfixed bugs
 While I was early deploying to Heroku, I got an error and the app wasn't working. 
 
-<img src="./media/error.jpg">
+<img src="./static/media/error.jpg">
 
 The issue was that the cloudinary storage wasn't install through the terminal. Then it was installed properly and the app successfully was deployed.
 
