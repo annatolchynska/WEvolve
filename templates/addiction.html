@@ -1,151 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mental health clinic">
-    <meta name="keywords" content="Mental Health, Mental isuues, Mental Treatment, Mental Clinic, Mental Help">
-    <title>WEvolve</title>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/5d093ab506.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/addiction.css' %}">
 </head>
-
-<body>
-
-    <!--Nav-->
-    <!--barand and logo landing page link-->
-    <nav class="navbar navbar-light navbar-expand-sm ">
-        <a href="{% url 'home' %}" class="navbar-brand">
-            WEvolve <i class="fa-solid fa-yin-yang"></i></a>
-
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span></button>
-        <!--contacts menu-->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" id="contacts"> Contacts </a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item"><i class="fa-solid fa-phone"></i> 555-357-68-25</a>
-                        <a class="dropdown-item"><i class="fa-solid fa-envelope"></i> WEvolve@gmail.com</a>
-                        <a class="dropdown-item" href="https://www.instagram.com"
-                            aria-label="Visit our Instagram (opens in a new tab)" target="_blank" rel="noopener">Evolve
-                            with us on <i class="fa-brands fa-instagram"></i></a>
-                        <a class="dropdown-item" href="https://www.facebook.com"
-                            aria-label="Visit our Facebook (opens in a new tab)" target="_blank" rel="noopener">Evolve
-                            with us on <i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                </li>
-                <!--link to about page-->
-                <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about' %}" id="about">About</a></li>
-                <!--mental health issues menu-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Our speciality
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{% url 'mental' %}">Mental health</a>
-                        <a class="dropdown-item" href="{% url 'addiction' %}">Addiction</a>
-                        <a class="dropdown-item" href="{% url 'holistic' %}">Holistic health</a>
-                        <a class="dropdown-item" href="{% url 'costs' %}">Menu</a>
-                    </div>
-                </li>
-                <!--book button-->
-                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book an appointment</a>
-                </li>
-                <li class="nav-item mr-2"><a class="nav-link" id="sign" href="/">Sign In / Sign Up</a></li>
-            </ul>
-        </div>
-        <div class="d-none d-md-block">
-            <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
-            </p>
-            <a href="/login" id="booking">Book an appointment</a>
-        </div>
-
-    </nav>
-    <!--main header-->
-    <div class="container-fluid callout-container">
-        <!--floating quote-->
-        <div class="row">
-            <div class="callout jumbotron text-center">
-                <div class="buddha">
-                    <span>"No</span>
-                    <span>matter</span>
-                    <span>how</span>
-                    <span>hard</span>
-                    <span>the</span>
-                    <span>past</span>
-                    <span>is,</span>
-                    <span>you</span>
-                    <span>can</span>
-                    <span>always</span>
-                    <span>begin</span>
-                    <span>again.."</span>
-                    <span>(Buddha)</span>
-                </div>
-                <hr class="block-divider">
-                <!--main description-->
-                <p class="lead" id="cntr">
-                    ADDICTION
-                </p>
-                <p class="lead">
-                    is a compulsive, chronic, physiological or psychological need for a habit-forming
-                    substance, behavior, or activity having harmful physical, psychological, or social effects and
-                    typically causing well-defined symptoms (such as anxiety, irritability, tremors, or nausea) upon
-                    withdrawal or abstinence.
-                    Typically there are different types of addictions:
-                    alcohol addiction, an addiction to prescription painkillers, drug addictions, gambling addiction.
-                </p>
-                <p class="affirm">
-                    YOU DON'T HAVE TO STRUGGLE IN SILENCE!
-                </p>
-                <hr class="block-divider">
-                <p class="lead">
-                    There are several methods of treatment we use at WEvolve such as evidence-based
-                    treatments: detoxification, cognitive behavioral therapy (which helps you recognize your
-                    unhealthy behavioral patterns and can also help you learn to identify triggers and develop
-                    coping skills), Rational Emotive Behavior Therapy (that helps you realize that the power of
-                    rational thinking lies within yourself and is not related to external situations or stressors),
-                    treatment with medications.
-                </p>
-                <p class="lead">
-                    Here at WEvolve we practice holistic treatment in complex with evidence-based
-                    classical treatment, which helps curb withdrawal symptoms, serves as coping tools to
-                    prevent relapse, helps with mental health and emotional issues, and enhance mental,
-                    physical and spiritual wellbeing as well as overall quality of life.
-                </p>
-                <hr class="block-divider">
-                <p class="affirm">
-                    THE STRONGEST PEOPLE ARE THOSE WHO FIGHT THE BATTLES WE KNOW NOTHING ABOUT
-                </p>
-                <!--link to the start of the page-->
-                <a href="{% url 'addiction' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
+<!--main header-->
+<div class="container-fluid callout-container">
+    <!--floating quote-->
+    <div class="row">
+        <div class="callout jumbotron text-center">
+            <div class="buddha">
+                <span>"No</span>
+                <span>matter</span>
+                <span>how</span>
+                <span>hard</span>
+                <span>the</span>
+                <span>past</span>
+                <span>is,</span>
+                <span>you</span>
+                <span>can</span>
+                <span>always</span>
+                <span>begin</span>
+                <span>again.."</span>
+                <span>(Buddha)</span>
             </div>
+            <hr class="block-divider">
+            <!--main description-->
+            <p class="lead" id="cntr">
+                ADDICTION
+            </p>
+            <p class="lead">
+                is a compulsive, chronic, physiological or psychological need for a habit-forming
+                substance, behavior, or activity having harmful physical, psychological, or social effects and
+                typically causing well-defined symptoms (such as anxiety, irritability, tremors, or nausea) upon
+                withdrawal or abstinence.
+                Typically there are different types of addictions:
+                alcohol addiction, an addiction to prescription painkillers, drug addictions, gambling addiction.
+            </p>
+            <p class="affirm">
+                YOU DON'T HAVE TO STRUGGLE IN SILENCE!
+            </p>
+            <hr class="block-divider">
+            <p class="lead">
+                There are several methods of treatment we use at WEvolve such as evidence-based
+                treatments: detoxification, cognitive behavioral therapy (which helps you recognize your
+                unhealthy behavioral patterns and can also help you learn to identify triggers and develop
+                coping skills), Rational Emotive Behavior Therapy (that helps you realize that the power of
+                rational thinking lies within yourself and is not related to external situations or stressors),
+                treatment with medications.
+            </p>
+            <p class="lead">
+                Here at WEvolve we practice holistic treatment in complex with evidence-based
+                classical treatment, which helps curb withdrawal symptoms, serves as coping tools to
+                prevent relapse, helps with mental health and emotional issues, and enhance mental,
+                physical and spiritual wellbeing as well as overall quality of life.
+            </p>
+            <hr class="block-divider">
+            <p class="affirm">
+                THE STRONGEST PEOPLE ARE THOSE WHO FIGHT THE BATTLES WE KNOW NOTHING ABOUT
+            </p>
+            <!--link to the start of the page-->
+            <a href="{% url 'addiction' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+</div>
+{%endblock%}

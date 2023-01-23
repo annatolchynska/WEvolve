@@ -1,142 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mental health clinic">
-    <meta name="keywords" content="Mental Health, Mental isuues, Mental Treatment, Mental Clinic, Mental Help">
-    <title>WEvolve</title>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/5d093ab506.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/holistic-health.css' %}">
+
 </head>
 
-<body>
 
-    <!--Nav-->
-    <nav class="navbar navbar-light navbar-expand-sm ">
-        <!--brand and logo link to the landing page-->
-        <a href="{% url 'home' %}" class="navbar-brand">
-            WEvolve <i class="fa-solid fa-yin-yang"></i></a>
-
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span></button>
-        <!--contacts menu-->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" id="contacts"> Contacts </a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item"><i class="fa-solid fa-phone"></i> 555-357-68-25</a>
-                        <a class="dropdown-item"><i class="fa-solid fa-envelope"></i> WEvolve@gmail.com</a>
-                        <a class="dropdown-item" href="https://www.instagram.com"
-                            aria-label="Visit our Instagram (opens in a new tab)" target="_blank" rel="noopener">Evolve
-                            with us on <i class="fa-brands fa-instagram"></i></a>
-                        <a class="dropdown-item" href="https://www.facebook.com"
-                            aria-label="Visit our Facebook (opens in a new tab)" target="_blank" rel="noopener">Evolve
-                            with us on <i class="fa-brands fa-facebook"></i></a>
-                    </div>
-                </li>
-                <!--link to about page-->
-                <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about' %}" id="about">About</a></li>
-                <!--mental health issues menu-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Our speciality
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{% url 'mental' %}">Mental health</a>
-                        <a class="dropdown-item" href="{% url 'addiction' %}">Addiction</a>
-                        <a class="dropdown-item" href="{% url 'holistic' %}">Holistic health</a>
-                        <a class="dropdown-item" href="{% url 'costs' %}">Menu</a>
-                    </div>
-                </li>
-                <!--book button-->
-                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book an appointment</a>
-                </li>
-                <li class="nav-item mr-2"><a class="nav-link" id="sign" href="/">Sign In / Sign Up</a></li>
-            </ul>
-        </div>
-        <div class="d-none d-md-block">
-            <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
-            </p>
-            <a href="/login" id="booking">Book an appointment</a>
-        </div>
-
-    </nav>
-    <!--main header-->
-    <div class="container-fluid callout-container">
-        <div class="row">
-            <!--floating quote-->
-            <div class="callout jumbotron">
-                <div class="buddha">
-                    <span>Your</span>
-                    <span>mind</span>
-                    <span>is</span>
-                    <span>your</span>
-                    <span>servant.</span>
-                    <span>Your</span>
-                    <span>body</span>
-                    <span>is a </span>
-                    <span>vehicle.</span>
-                    <span>Your</span>
-                    <span>soul is</span>
-                    <span>your</span>
-                    <span>residence..</span>
-                </div>
-                <span><i class="fa-solid fa-om" id="om"></i></span>
-                <!--main description-->
-                <p class="lead">
-                    So, what is holistic healthcare at the WEvolve
-                    centre? <br> It's about honoring the mind-body-soul
-                    connection and treating the whole person, using a
-                    variety of clinically proven therapies.
-                </p>
-
-                <p class="lead">
-                    Holistic health is about providing for your physical,
-                    mental, spiritual, and social needs. It&#39;s rooted in the
-                    understanding that all these aspects affect your
-                    overall health, and being unwell in one aspect affects
-                    you in others.
-                </p>
-                <p class="lead">
-                    We use a wide variety of clinically
-                    proven therapies – from medications to dietary
-                    changes and exercise plans, to psychological and
-                    spiritual counseling, including holistic practices, such as:<br>Massage, Osteopathy,Acupuncture,
-                    Acupressure,
-                    Breath Therapy, Meditation, Hypnosis, Aromatherapy, Herbal Therapy, Nutrition Plans,
-                    Exercise Routines, Yoga & Tai Chi, Art & Music Therapy and others.
-                </p>
-                <!--link to the start of the page-->
-                <a href="{% url 'holistic' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
+<!--main header-->
+<div class="container-fluid callout-container">
+    <div class="row">
+        <!--floating quote-->
+        <div class="callout jumbotron">
+            <div class="buddha">
+                <span>Your</span>
+                <span>mind</span>
+                <span>is</span>
+                <span>your</span>
+                <span>servant.</span>
+                <span>Your</span>
+                <span>body</span>
+                <span>is a </span>
+                <span>vehicle.</span>
+                <span>Your</span>
+                <span>soul is</span>
+                <span>your</span>
+                <span>residence..</span>
             </div>
+            <span><i class="fa-solid fa-om" id="om"></i></span>
+            <!--main description-->
+            <p class="lead">
+                So, what is holistic healthcare at the WEvolve
+                centre? <br> It's about honoring the mind-body-soul
+                connection and treating the whole person, using a
+                variety of clinically proven therapies.
+            </p>
+
+            <p class="lead">
+                Holistic health is about providing for your physical,
+                mental, spiritual, and social needs. It&#39;s rooted in the
+                understanding that all these aspects affect your
+                overall health, and being unwell in one aspect affects
+                you in others.
+            </p>
+            <p class="lead">
+                We use a wide variety of clinically
+                proven therapies – from medications to dietary
+                changes and exercise plans, to psychological and
+                spiritual counseling, including holistic practices, such as:<br>Massage, Osteopathy,Acupuncture,
+                Acupressure,
+                Breath Therapy, Meditation, Hypnosis, Aromatherapy, Herbal Therapy, Nutrition Plans,
+                Exercise Routines, Yoga & Tai Chi, Art & Music Therapy and others.
+            </p>
+            <!--link to the start of the page-->
+            <a href="{% url 'holistic' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
         </div>
     </div>
-    </div>
+</div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+{%endblock%}

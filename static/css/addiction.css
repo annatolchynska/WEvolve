@@ -209,9 +209,10 @@ body {
 
 .block-divider {
 
+    color: white;
     width: 250px;
-    height: 1px;
-    background-color: white;
+    height: 2px;
+   margin-left: 45%;
 
 }
 
@@ -298,8 +299,8 @@ body {
 }
 
 /* media queries */
-/* for sreens size from 730px and down */
-@media screen and (max-width: 730px) {
+/* for sreens size from 750px and down */
+@media screen and (max-width: 750px) {
 
     .jumbotron .lead {
 

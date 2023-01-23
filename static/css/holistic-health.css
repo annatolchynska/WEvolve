@@ -20,6 +20,7 @@ body {
 .jumbotron {
 
     background-color: transparent;
+    
 
 }
 
@@ -248,7 +249,7 @@ body {
 .navbar .navbar-nav a {
 
     font-weight: lighter;
-    color: rgb(87, 35, 105);
+    color: rgb(190, 125, 211);
 
 }
 

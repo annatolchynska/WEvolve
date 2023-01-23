@@ -245,9 +245,10 @@ text-align: center;
 
 .block-divider {
 
+    background-color: white;
     width: 250px;
     height: 1px;
-    background-color: white;
+   
 
 }
 
