@@ -22,7 +22,7 @@
     <!--Nav-->
     <!--barand and logo landing page link-->
     <nav class="navbar navbar-light navbar-expand-sm ">
-        <a href="/templates/index.html" class="navbar-brand">
+        <a href="{% url 'home' %}" class="navbar-brand">
             WEvolve <i class="fa-solid fa-yin-yang"></i></a>
 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -47,7 +47,7 @@
                     </div>
                 </li>
                 <!--link to about page-->
-                <li class="nav-item mr-2"><a class="nav-link" href="/template/about.html" id="about">About</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about' %}" id="about">About</a></li>
                 <!--mental health issues menu-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -55,10 +55,10 @@
                         Our speciality
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/templates/mental-health.html">Mental health</a>
-                        <a class="dropdown-item" href="/templates/addiction.html">Addiction</a>
-                        <a class="dropdown-item" href="/templates/holistic-health.html">Holistic health</a>
-                        <a class="dropdown-item" href="/templates/costs.html">Menu</a>
+                        <a class="dropdown-item" href="{% url 'mental' %}">Mental health</a>
+                        <a class="dropdown-item" href="{% url 'addiction' %}">Addiction</a>
+                        <a class="dropdown-item" href="{% url 'holistic' %}">Holistic health</a>
+                        <a class="dropdown-item" href="{% url 'costs' %}">Menu</a>
                     </div>
                 </li>
                 <!--book button-->
@@ -130,7 +130,7 @@
                     THE STRONGEST PEOPLE ARE THOSE WHO FIGHT THE BATTLES WE KNOW NOTHING ABOUT
                 </p>
                 <!--link to the start of the page-->
-                <a href="/templates/addiction.html"><i class="fa-solid fa-yin-yang" id="home"></i></a>
+                <a href="{% url 'addiction' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
             </div>
         </div>
     </div>

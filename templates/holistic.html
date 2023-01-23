@@ -14,15 +14,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/mental-health.css">
+    <link rel="stylesheet" href="/static/css/holistic-health.css">
 </head>
 
 <body>
 
     <!--Nav-->
     <nav class="navbar navbar-light navbar-expand-sm ">
-        <!--name and logo link to the landing page-->
-        <a href="/templates/index.html" class="navbar-brand">
+        <!--brand and logo link to the landing page-->
+        <a href="{% url 'home' %}" class="navbar-brand">
             WEvolve <i class="fa-solid fa-yin-yang"></i></a>
 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -46,8 +46,8 @@
                             with us on <i class="fa-brands fa-facebook"></i></a>
                     </div>
                 </li>
-                <!--link to the about page-->
-                <li class="nav-item mr-2"><a class="nav-link" href="/template/about.html" id="about">About</a></li>
+                <!--link to about page-->
+                <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about' %}" id="about">About</a></li>
                 <!--mental health issues menu-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -55,10 +55,10 @@
                         Our speciality
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/templates/mental-health.html">Mental health</a>
-                        <a class="dropdown-item" href="/templates/addiction.html">Addiction</a>
-                        <a class="dropdown-item" href="/templates/holistic-health.html">Holistic health</a>
-                        <a class="dropdown-item" href="/templates/costs.html">Menu</a>
+                        <a class="dropdown-item" href="{% url 'mental' %}">Mental health</a>
+                        <a class="dropdown-item" href="{% url 'addiction' %}">Addiction</a>
+                        <a class="dropdown-item" href="{% url 'holistic' %}">Holistic health</a>
+                        <a class="dropdown-item" href="{% url 'costs' %}">Menu</a>
                     </div>
                 </li>
                 <!--book button-->
@@ -78,60 +78,49 @@
     <div class="container-fluid callout-container">
         <div class="row">
             <!--floating quote-->
-            <div class="callout jumbotron text-center">
+            <div class="callout jumbotron">
                 <div class="buddha">
-                    <span>The</span>
-                    <span>past is</span>
-                    <span>where</span>
-                    <span>you</span>
-                    <span>learn</span>
-                    <span>the</span>
-                    <span>lessons.</span>
-                    <span>The</span>
-                    <span>future is</span>
-                    <span>where</span>
-                    <span>you</span>
-                    <span>apply</span>
-                    <span>them..</span>
+                    <span>Your</span>
+                    <span>mind</span>
+                    <span>is</span>
+                    <span>your</span>
+                    <span>servant.</span>
+                    <span>Your</span>
+                    <span>body</span>
+                    <span>is a </span>
+                    <span>vehicle.</span>
+                    <span>Your</span>
+                    <span>soul is</span>
+                    <span>your</span>
+                    <span>residence..</span>
                 </div>
+                <span><i class="fa-solid fa-om" id="om"></i></span>
                 <!--main description-->
                 <p class="lead">
-                    Mental and physical health are equally important components of overall
-                    health.<br>
-                    Whatever trauma you had in your past, it doesn't have to determine your future.
-                    Difficult past experiences come with an emotional charge. Either you are REliving them or you are
-                    REmembering them. Our best therapists at WEvolve make sure all your past memories are processed and
-                    dealt with the right way. So then, the past becomes just that: a memory.
+                    So, what is holistic healthcare at the WEvolve
+                    centre? <br> It's about honoring the mind-body-soul
+                    connection and treating the whole person, using a
+                    variety of clinically proven therapies.
                 </p>
-                <!--rotating icon-->
-                <span> <i class="fa-solid fa-yin-yang" id="icon"></i></span>
+
                 <p class="lead">
-                    To determine a diagnosis and check for related complications you may have due to mental disorder,
-                    our best specialists make: a physical exam, lab tests, a psychological evaluation.<br>
-                    We specialize in treating mental health disorders, such as: Depression, Bipolar disorder, Dysthymia,
-                    Trauma, Anxiety, panic attacks, Chronic pain syndrome, Emotional crisis, Mood
-                    disorders &amp; depression, Sleeping disorders, Isolation &amp; emptiness, selfharm,
-                    suicidal thoughts, Relation &amp; communication, Chronic fatique, Severe anxiety;
-                    Eating disorders; burnout; stress disorders, personality disorder and other.<br>
-                </p>
-                <hr class="block-divider">
-                <p class="lead">
-                    Sometimes it's difficult to find out which mental
-                    illness may be causing your symptoms. But taking the
-                    time and effort to get an accurate diagnosis will help
-                    determine the appropriate treatment.
+                    Holistic health is about providing for your physical,
+                    mental, spiritual, and social needs. It&#39;s rooted in the
+                    understanding that all these aspects affect your
+                    overall health, and being unwell in one aspect affects
+                    you in others.
                 </p>
                 <p class="lead">
-                    Mental health issues are not permanent. The process that you are going through is the only
-                    thing that permanent.
-                </p>
-                <p class="lead">
-                    Our calm and peaceful residences will serve as a private, tranquil and
-                    safe environment where you can let go of your past and future concerns,
-                    and start working on yourself now.
+                    We use a wide variety of clinically
+                    proven therapies – from medications to dietary
+                    changes and exercise plans, to psychological and
+                    spiritual counseling, including holistic practices, such as:<br>Massage, Osteopathy,Acupuncture,
+                    Acupressure,
+                    Breath Therapy, Meditation, Hypnosis, Aromatherapy, Herbal Therapy, Nutrition Plans,
+                    Exercise Routines, Yoga & Tai Chi, Art & Music Therapy and others.
                 </p>
                 <!--link to the start of the page-->
-                <a href="/templates/mental-health.html"><i class="fa-solid fa-yin-yang" id="home"></i></a>
+                <a href="{% url 'holistic' %}"><i class="fa-solid fa-yin-yang" id="home"></i></a>
             </div>
         </div>
     </div>
