@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+</head>
+
+    <div class="row">
+        <section class="callout motto text-center">
+            <div>
+                <span id="emblem"> WEvolve <i class="fa-solid fa-yin-yang" id="icon"></i></span>
+            </div>
+        </section>
+        <div class="google-maps">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31552.842104317853!2d115.15851318433783!3d-8.681539310066473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92a0a975b4455d5a!2s6P3Q8555%2B4VF!5e0!3m2!1sru!2sde!4v1674580464722!5m2!1sru!2sde"
+                style='border:0', height="400", width="650">
+            </iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="contact-info">
+            <h1>
+                Contact Us
+            </h1>
+            <p class="info">
+                <i class="fa-solid fa-phone"></i> 555-357-68-25
+            </p>
+            <p class="info"> <i class="fa-solid fa-envelope"></i> WEvolve@gmail.com</p>
+            <p class="info">Location: 8555, Kabupaten Badung, Bali, Indonesia</p>
+        </div>
+    </div>
+
+<!-- Footer -
+<footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center">Hanna Tolchynska &#169 2023</p>
+</footer>-->
+{%endblock%}

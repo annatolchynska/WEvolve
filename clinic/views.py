@@ -23,3 +23,7 @@ def addiction(request):
 
 def costs(request):
     return render(request, 'costs.html', {})
+
+
+def contact(request):
+    return render(request, 'contact.html', {})

@@ -16,11 +16,12 @@ Project purpose is
 
 
 
-### Lucidchart
+### Lucidchart and Data model
+
+
 
 <img src="./static/media/erd.jpg">
 
-### Data model
 
 
 ### Design
