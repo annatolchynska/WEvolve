@@ -206,9 +206,10 @@ body {
 .block-divider {
 
     width: 250px;
-    height: 1px;
-    background-color: rgb(94, 155, 58);
-
+   height: 2px;
+    color:white;
+    margin-left: 40%;
+    
 }
 
 #icon {

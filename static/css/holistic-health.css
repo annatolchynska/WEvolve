@@ -14,8 +14,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
     display: flex;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -290,6 +291,28 @@ body {
 }
 
 /* media queries */
+/* for sreens size from 1200px and down */
+@media screen and (max-width: 1200px) {
+
+    .callout-container {
+
+        position: relative;
+    }
+
+}
+/* media queries */
+/* for sreens size from 950px and down */
+@media screen and (max-width: 950px) {
+
+    .callout-container {
+
+        position: relative;
+    }
+
+}
+
+
+/* media queries */
 /* for sreens size from 730px and down */
 @media screen and (max-width: 730px) {
 
@@ -298,6 +321,11 @@ body {
         padding: 20px;
         font-size: 20px;
 
+    }
+
+    .callout-container {
+
+        position: relative;
     }
 
     #om {
@@ -314,6 +342,11 @@ body {
 
             font-size: 20px;
 
+        }
+
+        .callout-container {
+
+            position: relative;
         }
 
         .jumbotron .lead {
