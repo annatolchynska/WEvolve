@@ -6,6 +6,18 @@ body {
 
 }
 
+.row {
+
+    height: 100%;
+    background: url('/static/media/contact.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    position: relative;
+
+}
 
 /* Navbar menu */
 .navbar {
@@ -76,8 +88,8 @@ body {
 
 #emblem {
 
-    color:#051a00;;
-    text-shadow: 2px 2px 2px white;
+    color: white;
+    text-shadow: 2px 2px 2px #000027;
     font-size: 35px;
     padding: 0;
    
@@ -102,7 +114,7 @@ body {
 #icon {
 
     animation: rotation 4s infinite linear;
-    text-shadow: 2px 2px 4px white;
+    text-shadow: 2px 2px 4px #000027;
 
 }
 
@@ -116,10 +128,15 @@ body {
     }
 }
 
+h1 {
+
+    text-shadow: 1px 1px 2px white;
+}
+
 .footer {
 
     background-color: rgba(132, 247, 195, 0.3);
-    color: #051a00;
+    color: #000027;
     margin: 0;
     padding: 0;
     

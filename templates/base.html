@@ -22,7 +22,7 @@
 
 </head>
 
-    <!--Nav-->
+<!--Nav-->
 <nav class="navbar navbar-light navbar-expand-sm ">
     <!--brand and logo link to the landing page-->
     <a href="{% url 'home' %}" class="navbar-brand">
@@ -47,8 +47,7 @@
                     <a class="dropdown-item" href="https://www.facebook.com"
                         aria-label="Visit our Facebook (opens in a new tab)" target="_blank" rel="noopener">Evolve
                         with us on <i class="fa-brands fa-facebook"></i></a>
-                        <a class="dropdown-item" href="{% url 'contact' %}"
-                       >You can find us here</a>
+                    <a class="dropdown-item" href="{% url 'contact' %}">You can find us here</a>
 
                 </div>
             </li>
@@ -67,27 +66,30 @@
                 </div>
             </li>
             <!--book button-->
-           
-            <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book an appointment</a>
+            {% if user.is_authenticated %}
+            <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/">Book an appointment</a>
             </li>
-           
-            <li class="nav-item mr-2"><a class="nav-link" href="/">Sign In / Sign Up</a></li>
-           
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
+            {% else %}
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
+            {% endif %}
+
         </ul>
     </div>
     <div class="d-none d-md-block">
         <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
-        <a href="/login" id="booking">Book an appointment</a></p>
+            <a href="/login" id="booking">Book an appointment</a></p>
     </div>
 
 </nav>
-    
-        {% block content %}
-        <!-- Content Goes here -->  
-        
-        {% endblock content %}
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+{% block content %}
+<!-- Content Goes here -->
+
+{% endblock content %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
