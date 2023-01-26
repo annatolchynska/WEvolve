@@ -49,6 +49,7 @@ body {
 
 }
 
+
 .navbar .navbar-toggler {
 
     border: 0;
@@ -78,7 +79,7 @@ body {
 
 }
 
-#inline {
+#inline, #inline1 {
 
     color: #85131C;
     font-weight: lighter;
@@ -86,11 +87,12 @@ body {
 
 }
 
-#booking {
+#booking, #booking1 {
 
     color: #4B0082;
     font-size: larger;
     font-weight: lighter;
+    text-decoration: none;
 
 }
 

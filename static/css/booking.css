@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+body {
+
+    font-family: 'Yeon Sung', serif;
+
+}
+
+.row {
+
+    height: 100%;
+    background: url('/static/media/contact.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    position: relative;
+
+}
+
+/* Navbar menu */
+.navbar {
+
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(132, 247, 195, 0.3);
+
+}
+
+.navbar .navbar-brand {
+
+    color: #524849;
+}
+
+.navbar .navbar-brand:hover {
+
+    color: #4B0082;
+
+}
+
+.navbar .navbar-toggler {
+
+    border: 0;
+
+}
+
+#navbarDropdownMenuLink,
+#about,
+#contacts {
+
+    color: #4B0082;
+    font-weight: lighter;
+    font-size: 14px;
+
+}
+
+.navbar .navbar-nav a {
+
+    font-weight: lighter;
+    color: #4B0082;
+
+}
+
+.dropdown-menu {
+
+    margin: 2px;
+
+}
+
+#inline {
+
+    color: #1a40b3;
+    font-weight: lighter;
+    font-size: 14px;
+
+}
+
+#booking {
+
+    color: #270234;
+    font-size: larger;
+    font-weight: lighter;
+
+}
+
+#emblem {
+
+    color: white;
+    text-shadow: 2px 2px 2px #000027;
+    font-size: 35px;
+    padding: 0;
+   
+}
+
+
+.row {
+
+    background-color: rgb(190, 255, 190);
+    margin: 0;
+    padding-top: 50px;
+    text-align: center;
+    background-position: cover;
+}
+
+/*rotating icon*/
+#icon {
+
+    animation: rotation 4s infinite linear;
+    text-shadow: 2px 2px 4px #000027;
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+h1 {
+
+    text-shadow: 1px 1px 2px white;
+}
+
+p {
+
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* media queries */
+/* for sreens size from 450px and down */
+@media screen and (max-width: 450px) {
+
+.info {
+
+    font-size: 20px;
+} 
+
+#emblem, #icon {
+
+    font-size: 25px;
+}
+}

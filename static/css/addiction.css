@@ -20,12 +20,6 @@ body {
 
 }
 
-.jumbotron {
-
-    background-color: transparent;
-
-}
-
 /*main description*/
 .jumbotron .lead {
 
@@ -56,6 +50,7 @@ body {
     font-size: 30px;
     color: white;
     text-shadow: 1px 1px 1px black;
+    padding-top: 30px;
 
 }
 
@@ -295,6 +290,7 @@ body {
 
     color: white;
     padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 30px;
     text-shadow: 1px 1px 1px black;
 

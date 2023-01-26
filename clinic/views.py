@@ -27,3 +27,7 @@ def costs(request):
 
 def contact(request):
     return render(request, 'contact.html', {})
+
+
+def booking(request):
+    return render(request, 'booking.html', {})

@@ -20,12 +20,7 @@ body {
 
 }
 
-.jumbotron {
 
-    background-color: transparent;
-    
-
-}
 
 #om {
 
@@ -54,6 +49,7 @@ body {
     font-size: 30px;
     color: white;
     text-shadow: 1px 2px 1px black;
+    padding-top: 30px;
 
 }
 

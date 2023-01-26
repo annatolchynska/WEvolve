@@ -98,6 +98,7 @@ body {
     color: rgb(94, 155, 58);
     font-size: 50px;
     text-shadow: 1px 1px 1px white;
+    padding-top: 30px;
 
 }
 
@@ -242,17 +243,14 @@ body {
 
 }
 
-.jumbotron {
-
-    background-color: transparent;
-
-}
 
 .jumbotron .lead {
 
     font-size: 25px;
     text-align: justify;
     color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 
@@ -268,6 +266,7 @@ body {
 
     color:white;
     padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 30px;
     text-shadow: 1px 1px 1px black;
 
@@ -332,6 +331,7 @@ body {
     .wevolve {
 
         font-size: 30px;
+        
     }
 
 }

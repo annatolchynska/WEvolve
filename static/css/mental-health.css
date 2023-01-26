@@ -21,11 +21,6 @@ body {
 
 }
 
-.jumbotron {
-
-    background-color: transparent;
-
-}
 
 /*main description*/
 .jumbotron .lead {
@@ -47,6 +42,7 @@ body {
     font-size: 30px;
     color: white;
     text-shadow: 1px 2px 2px black;
+    padding-top: 30px;
 
 }
 
@@ -182,8 +178,9 @@ body {
 .block-divider {
 
     width: 250px;
-    height: 1px;
-    background-color: rgb(1, 81, 1);
+    height: 3px;
+    background-color: white;
+    margin-left: 40%;
 
 }
 
@@ -245,10 +242,11 @@ body {
     color: white;
 
 }
+
 #sign {
 
-    color:white;
-    
+    color: white;
+
 }
 
 #inline {
@@ -299,6 +297,7 @@ body {
 
     color: white;
     padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 30px;
     text-shadow: 1px 1px 1px black;
 
@@ -315,10 +314,15 @@ body {
 
     }
 
+    #icon {
+
+        font-size: 25px;
+
+    }
+
     .block-divider {
 
         width: 50px;
-        height: 1px;
 
     }
 
@@ -340,8 +344,8 @@ body {
         }
 
         .block-divider {
+
             width: 50px;
-            height: 1px;
 
         }
 
