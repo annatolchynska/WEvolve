@@ -1,87 +1,45 @@
 {% extends "base.html" %}
-{% load static %}
+
 {% block content %}
-
-<head>
-    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
-
-</head>
+{% load crispy_forms_tags %}
+{% load static %}
 
 <div class="row">
-    <div class="callout motto text-center">
-        <span id="emblem"> WEvolve <i class="fa-solid fa-yin-yang" id="icon"></i></span>
+  <div class="col-md-4 mx-auto">
+    <!-- Shows the form only is user is logged in -->
+    {% if user.is_authenticated %}
+    <h3>Place your booking</h3>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success">
+      <strong>{{message}}</strong>
     </div>
-
-    <!--
-    <div class="col-md-8 offset-md-2" id="message-container">
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
+    {% endfor %}
+    {% endif %}
+    <form method="post" style="margin-top: 1.3em;">
+      {{ form | crispy }}
+      {% csrf_token %}
+      <p class="text-muted">The booking is only temporary until we have approved it. The time choosen can't be
+        guaranteed until we have approved the booking. <br> We will call you within 24 hours if we have some questions
+        or if we have to change something.<br>
+        If everything is fine you will get an email when we have confirmed the booking.</p>
+      <p class="text-muted">If it is a urgent matter, please call our emergeny number at <a
+          href="tel:00468000000">+468-000-000</a> instead.</p>
+      <button type="submit" class="btn btn-primary btn-signup btn-lg">Submit</button>
+    </form>
+    {% else %}
+    <div class="card mx-auto" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Create Account or Login</h5>
+        <p class="card-text">To place a booking you need to have an account. Create an account or login to existing
+          acoount with the buttons below.</p>
+        <a href="{% url 'account_signup' %}" class="btn btn-primary">Signup</a>
+        <a href="{% url 'account_login' %}" class="btn btn-primary">Login</a>
+      </div>
     </div>
--->
-    <div class="container-fluid px-1 py-5 mx-auto">
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <h1>
-                    Book an appointment
-                </h1>
-                <p>Use this form to contact us and request an appointment..</p>
-                <div class="card">
-                    <form class="form-card" method="POST" action="{% url 'booking' %}">
-                        {% csrf_token %}
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex">
-                                <label class="form-control-label px-3 text-white">FIRST NAME<span class="text-dark">
-                                        *</span>
-                                </label>
-                                <input required type="text" id="fname" name="fname" placeholder="Enter your first name">
-                            </div>
-
-                            <div class="form-group col-sm-6 flex-column d-flex">
-                                <label class="form-control-label px-3 text-white">LAST NAME<span class="text-dark">
-                                        *</span></label>
-                                <input required type="text" id="lname" name="lname" placeholder="Enter your last name">
-                            </div>
-
-                        </div>
-
-                        <div class="row justify-content-between text-left">
-
-                            <div class="form-group col-sm-6 flex-column d-flex">
-                                <label class="form-control-label px-3 text-white">EMAIL<span class="text-dark"> *</span>
-                                </label>
-                                <input required type="text" id="email" name="email" placeholder="Enter your email">
-                            </div>
-
-                            <div class="form-group col-sm-6 flex-column d-flex">
-                                <label class="form-control-label px-3 text-white">PHONE NUMBER<span class="text-dark">
-                                        *</span></label>
-                                <input type="text" id="mob" name="mobile"
-                                    placeholder="Enter your phone number">
-                            </div>
-                            <div class="row justify-content-between text-center">
-                                <div class="form-group fs-3 text-center">
-                                    <label class="form-control-label px-3 text-white">SELECT DAY<span class="text-dark">
-                                            *</span></label>
-                                    <select class="form-select fs-3" name="day">
-                                        {% for validateWeekday in validateWeekdays %}
-                                        <option value="{{validateWeekday}}">{{validateWeekday}}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="form-group col-sm-6"> <button type="submit" class="btn btn-light">Continue</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endif %}
+  </div>
 </div>
-{% endblock content %}
+
+
+{% endblock %}

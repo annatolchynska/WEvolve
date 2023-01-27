@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from datetime import datetime, timedelta
-from .models import *
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from .models import BookAppointment
+from .forms import BookingForm, EditBooking
 
 
 def home(request):
@@ -41,224 +42,135 @@ def bookingsubmit(request):
     return render(request, 'bookingsubmit.html')
 
 
-def post(self, request):
-    fname = request.POST.get('fname')
-    lname = request.POST.get('lname')
-    email = request.POST.get('email')
-    mobile = request.POST.get('mobile')
-    message = request.POST.get('request')
-
-    messages.add_message(request, messages.SUCCESS, f"{fname}booked!")
-    return HttpResponseRedirect(request.path)
-
-
-'''
-def booking(request):
-    weekdays = validWeekday(22)
-
-    validateWeekdays = isWeekdayValid(weekdays)
-
+@login_required
+def book_appointment(request):
+    """
+    Views the booking form and checks that the
+    input is valid before submitting. If it is
+    not, a message will show and redirect back
+    to the form.
+    """
     if request.method == 'POST':
-        day = request.POST.get('day')
+        booking = BookAppointment(user=request.user)
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Booking placed successfully.')
 
-        request.session['day'] = day
-
-        return redirect('bookingsubmit')
-
-    return render(request, 'booking.html', {
-            'weekdays': weekdays,
-            'validateWeekdays': validateWeekdays,
-        })
-
-
-def bookingSubmit(request):
-    user = request.user
-    times = [
-        "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM",
-        "5 PM", "6 PM", "7 PM"
-    ]
-    today = datetime.now()
-    minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
-    strdeltatime = deltatime.strftime('%Y-%m-%d')
-    maxDate = strdeltatime
-
-    day = request.session.get('day')
-
-    hour = checkTime(times, day)
-    if request.method == 'POST':
-        time = request.POST.get("time")
-        date = dayToWeekday(day)
-
-        if day <= maxDate and day >= minDate:
-            if date == 'Monday' or date == 'Friday' or date == 'Wednesday':
-                if Appointment.objects.filter(day=day).count() < 11:
-                    if Appointment.objects.filter(day=day, time=time).count() < 1:
-                        AppointmentForm = Appointment.objects.get_or_create(
-                            user=user,
-                            day=day,
-                            time=time,
-                        )
-                    messages.success(request, "Appointment Saved!")
-                    return redirect('home')
-                else:
-                    messages.success(request, "The Selected Time Is Full!")
-            else:
-                messages.success(request, "The Selected Day Is Full!")
-        else:
-            messages.success(request, "The Selected Date Is Incorrect")
+            return redirect('book_appointment')
     else:
-        messages.success(request, "The Selected Date Isn't Available!")
-
-    return render(request, 'bookingsubmit.html', {
-        'times': hour,
-    })
+        form = BookingForm()
+    return render(request, 'booking.html', {'form': form})
 
 
-def userPanel(request):
-    user = request.user
-    appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
-    return render(request, 'userPanel.html', {
-        'user': user,
-        'appointments': appointments,
-    })
+@login_required
+def view_booking(request):
+    """
+    Lets staff member view all bookings, and
+    regular user only his own bookings.
+    """
+    if request.user.is_staff:
+        bookings = BookAppointment.objects.all()
+    else:
+        bookings = request.user.bookings.all()
+    context = {
+        'bookings': bookings,
+    }
+    return render(request, 'booking/my_account.html', context)
 
 
-def userUpdate(request, id):
-    appointment = Appointment.objects.get(pk=id)
-    userdatepicked = appointment.day
-    '#Copy  booking:'
-    today = datetime.today()
-    minDate = today.strftime('%Y-%m-%d')
-
-    '#24h if statement in template:'
-    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
-    '#Calling "validWeekday"Function to Loop days you want in the next 21days:'
-    weekdays = validWeekday(22)
-
-    '#Only show the days that are not full:'
-    validateWeekdays = isWeekdayValid(weekdays)
-
-    if request.method == 'POST':
-        day = request.POST.get('day')
-
-        '#Store day and service in django session:'
-        request.session['day'] = day
-
-        return redirect('userUpdateSubmit', id=id)
-
-    return render(request, 'userUpdate.html', {
-        'weekdays': weekdays,
-        'validateWeekdays': validateWeekdays,
-        'delta24': delta24,
-        'id': id,
-            })
+@login_required
+def delete_booking(request, booking_id):
+    """
+    Deletes booking
+    """
+    if request.user.is_staff:
+        try:
+            booking = get_object_or_404(BookAppointment, id=booking_id)
+            booking.delete()
+            messages.success(request, 'Booking deleted successfully.')
+            return redirect('my_account')
+        except Http404 as err:
+            messages.error(request, 'Oops, booking not found.')
+            return redirect('my_account')
+    else:
+        return redirect('home')
 
 
-def userUpdateSubmit(request, id):
-    user = request.user
-    times = [
-        "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM",
-        "5 PM", "6 PM", "7 PM"
-    ]
-    today = datetime.now()
-    minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
-    strdeltatime = deltatime.strftime('%Y-%m-%d')
-    maxDate = strdeltatime
-
-    day = request.session.get('day')
-
-    '#Only show the time of the day that has not been selected before and the time he is editing:'
-    hour = checkEditTime(times, day, id)
-    appointment = Appointment.objects.get(pk=id)
-    userSelectedTime = appointment.time
-    if request.method == 'POST':
-        time = request.POST.get("time")
-        date = dayToWeekday(day)
-
-        if day <= maxDate and day >= minDate:
-            if date == 'Monday' or date == 'Friday' or date == 'Wednesday':
-                if Appointment.objects.filter(day=day).count() < 11:
-                    if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
-                        AppointmentForm = Appointment.objects.filter(pk=id).update(
-                            user=user,
-                            day=day,
-                            time=time,
-                        )
-                        messages.success(request, "Appointment Edited!")
-                        return redirect('index')
-                    else:
-                        messages.success(request, "The Selected Time Has Been Booked!")
-                else:
-                    messages.success(request, "The Selected Day Is Full!")
-            else:
-                messages.success(request, "The Selected Date Is Incorrect")
+@login_required
+def edit_booking(request, booking_id):
+    """
+    Presents the booking form with the recent informtion added.
+    When update is done update
+    has been made.
+    """
+    try:
+        booking = get_object_or_404(PlaceBooking, id=booking_id)
+        if request.method == 'POST':
+            form = EditBooking(request.POST, instance=booking)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Updated successfully!')
+                return redirect('my_account')
         else:
-            messages.success(request, "The Selected Date Isn't In The Correct Period!")
-
-    return render(request, 'userUpdateSubmit.html', {
-        'times': hour,
-        'id': id,
-    })
-
-
-def staffPanel(request):
-    today = datetime.today()
-    minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
-    strdeltatime = deltatime.strftime('%Y-%m-%d')
-    maxDate = strdeltatime
-    '#Only show the Appointments 21 days from today'
-    items = Appointment.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
-
-    return render(request, 'staffPanel.html', {
-        'items': items,
-    })
+            form = EditBooking(instance=booking)
+        context = {
+                'form': form
+            }
+        return render(request, 'booking/edit_booking.html', context)
+    except Http404 as err:
+        messages.error(request, 'Oops, booking not found.')
+        return redirect('my_account')
 
 
-def dayToWeekday(x):
-    z = datetime.strptime(x, "%Y-%m-%d")
-    y = z.strftime('%A')
-    return y
+@login_required
+def approve_booking(request, booking_id):
+    """
+    Let staff members approve a booking
+    or withdraw an approved booking.
+    .
+    """
+    if request.user.is_staff:
+        booking = get_object_or_404(PlaceBooking, id=booking_id)
+        booking.approved = not booking.approved
+        booking.save()
+        messages.success(request, 'Booking Updated successfully!')
+        return redirect('my_account')
+    else:
+        return redirect('home')
 
 
-def validWeekday(days):
-    '#Loop days you want in the next 21 days:'
-    today = datetime.now()
-    weekdays = []
-    for i in range(0, days):
-        x = today + timedelta(days=i)
-        y = x.strftime('%A')
-        if y == 'Monday' or y == 'Friday' or y == 'Wednesday':
-            weekdays.append(x.strftime('%Y-%m-%d'))
-    return weekdays
+@login_required
+def view_users(request):
+    """
+    Let staff memebers view all the users.
+    """
+    if request.user.is_staff:
+        users = User.objects.all()
+        context = {
+            'users': users,
+        }
+        return render(request, 'booking/users.html', context)
+    else:
+        return redirect('home')
 
 
-def isWeekdayValid(x):
-    validateWeekdays = []
-    for j in x:
-        if Appointment.objects.filter(day=j).count() < 10:
-            validateWeekdays.append(j)
-    return validateWeekdays
-
-
-def checkTime(times, day):
-    '#Only show the time of the day that has not been selected before:'
-    x = []
-    for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 1:
-            x.append(k)
-    return x
-
-
-def checkEditTime(times, day, id):
-    '#Only show the time of the day that has not been selected before:'
-    x = []
-    appointment = Appointment.objects.get(pk=id)
-    time = appointment.time
-    for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 1 or time == k:
-            x.append(k)
-    return x
-'''
+@login_required
+def delete_user(request, user_id):
+    """
+    Let staff member delete a user.
+    If the user does not exist, a message
+    will show.
+    """
+    if request.user.is_staff:
+        try:
+            user = get_object_or_404(User, id=user_id)
+            user.delete()
+            messages.success(request, 'User deleted successfully.')
+            return redirect('users')
+        except Http404 as err:
+            messages.error(request, 'Oops, user not found.')
+            return redirect('users')
+    else:
+        messages.error(request, 'You do not have permission to do this.')
+        return redirect('home')
