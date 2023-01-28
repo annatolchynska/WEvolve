@@ -9,7 +9,7 @@ body {
 .row {
 
     height: 100%;
-    background: url('/static/media/contact.jpg') no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/dzdl7p7ok/image/upload/v1674761512/static/media/contact.80e20d01dbe9.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

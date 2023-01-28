@@ -10,7 +10,7 @@ body {
 .callout-container {
 
     height: 100%;
-    background: url('/static/media/about.webp') no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/dzdl7p7ok/image/upload/v1674761510/static/media/about.9b5786dc8b76.webp) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
