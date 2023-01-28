@@ -9,7 +9,7 @@ body {
 .callout-container {
 
     height: 100%;
-    background: url('/static/media/buddha.jpg') no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/dzdl7p7ok/image/upload/v1674761514/static/media/buddha.996b9990de5b.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

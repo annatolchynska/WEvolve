@@ -15,14 +15,13 @@ class BookAppointment(models.Model):
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
     date_for_visit = models.DateField(null=True)
-    time_for_visit = models.TimeField(default=datetime.time(12, 00))
+    time_for_visit = models.TimeField(default=datetime.time(10, 00))
 
     def save(self, *args, **kwargs):
         if self.date_for_visit < datetime.date.today():
             raise ValidationError("The date cannot be in the past!")
-        super(PlaceBooking, self).save(*args, **kwargs)
+        super(BookAppointment, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['created_on']

@@ -1,6 +1,10 @@
 # <h1 align ="center"> WEvolve ☯ </h1>
+
+<img src="./static/media/responsiveness.png">
+
 ---
-[live link is here](https://wevolve-mhc.herokuapp.com/)
+
+[Welcome to Mental health treatment centre WEvolve](https://wevolve-mhc.herokuapp.com/)
 
  WEvolve is a website of mental healthcare centre that relies on holistic methods and individual, tailor-made treatment programmes as well as classical methods, to restore the balance between body, mind and soul. The centre offers treatments for a variety of mental health issues, such as mental health disorders, eating disorders, depression, panic attacks, PTSD, ADHD, OCD, burnout, personality disorder, addictions and other. Mental and physical health are equally important components of overall health. This site is targeted towards people who are searching for the mental calmness.
 
@@ -61,19 +65,23 @@ The page telling about what the addiction is and how the treatment centre deals 
 
 The page that gives a User info about holistic health practices WEvolve implements for mental issues treeatment as well as classic clinical treatment.
 
-<img src="./static/media/hh.png>
+<img src="./static/media/hh.png">
 
 The page with prices info
 All the pages have the back tag that takes the user to the top of the page.
 
-<img src="./static/media/price.png>
+<img src="./static/media/price.png">
 
 The page with the booking form, where only authenticated User can book an appointment in the clinic.
-The form contains all the necessary fields such as first name, last name, email.
+The form contains all the necessary fields such as first name, last name, email, date and time of appointment.
+
+<img src="./static/media/book.png">
 
 The User page where they can manage their appointments (reschedule/cancel).
 
 The page where staff can manage all appointments (reschedule them by demand and cancel as well).
+
+<img src="./static/media/staffmanage.png">
 
 The website has a logo adn it has a footer on the landing and contact pages.
 
@@ -132,7 +140,8 @@ The database was set up by following the steps beneath:
 * The proper steps were taken in the settings.py file to connect with the database.
 
 ### Credits
-
+Design ideas were taken from the walkthrough project "Bootstrapping Your Next Big Idea With Bootstrap 4";
+some code was taken from walkthrough projects "Hello Django" and "I think therefore I blog".
 
 
 

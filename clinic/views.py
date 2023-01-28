@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from .models import BookAppointment
 from .forms import BookingForm, EditBooking
 
@@ -34,16 +35,12 @@ def contact(request):
     return render(request, 'contact.html', {})
 
 
-def booking(request):
-    return render(request, 'booking.html', {})
-
-
-def bookingsubmit(request):
-    return render(request, 'bookingsubmit.html')
+def error404(request, exception):
+    return render(request, 'error404.html')
 
 
 @login_required
-def book_appointment(request):
+def booking(request):
     """
     Views the booking form and checks that the
     input is valid before submitting. If it is
@@ -57,7 +54,7 @@ def book_appointment(request):
             form.save()
             messages.success(request, 'Booking placed successfully.')
 
-            return redirect('book_appointment')
+            return redirect('booking')
     else:
         form = BookingForm()
     return render(request, 'booking.html', {'form': form})
@@ -76,7 +73,7 @@ def view_booking(request):
     context = {
         'bookings': bookings,
     }
-    return render(request, 'booking/my_account.html', context)
+    return render(request, 'useraccount.html', context)
 
 
 @login_required
@@ -89,10 +86,10 @@ def delete_booking(request, booking_id):
             booking = get_object_or_404(BookAppointment, id=booking_id)
             booking.delete()
             messages.success(request, 'Booking deleted successfully.')
-            return redirect('my_account')
+            return redirect('useraccount')
         except Http404 as err:
             messages.error(request, 'Oops, booking not found.')
-            return redirect('my_account')
+            return redirect('useraccount')
     else:
         return redirect('home')
 
@@ -111,33 +108,16 @@ def edit_booking(request, booking_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Updated successfully!')
-                return redirect('my_account')
+                return redirect('useraccount')
         else:
             form = EditBooking(instance=booking)
         context = {
                 'form': form
             }
-        return render(request, 'booking/edit_booking.html', context)
+        return render(request, 'edit.html', context)
     except Http404 as err:
-        messages.error(request, 'Oops, booking not found.')
-        return redirect('my_account')
-
-
-@login_required
-def approve_booking(request, booking_id):
-    """
-    Let staff members approve a booking
-    or withdraw an approved booking.
-    .
-    """
-    if request.user.is_staff:
-        booking = get_object_or_404(PlaceBooking, id=booking_id)
-        booking.approved = not booking.approved
-        booking.save()
-        messages.success(request, 'Booking Updated successfully!')
-        return redirect('my_account')
-    else:
-        return redirect('home')
+        messages.error(request, 'Sorry, booking not found.')
+        return redirect('useraccount')
 
 
 @login_required
@@ -150,7 +130,7 @@ def view_users(request):
         context = {
             'users': users,
         }
-        return render(request, 'booking/users.html', context)
+        return render(request, 'users.html', context)
     else:
         return redirect('home')
 

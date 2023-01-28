@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 mx-auto text-center">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success show" role="alert">
+        <strong>{{message}}</strong>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      <!-- Dashboard for staff memebers, lists all bookings from all users -->
+      {% if user.is_staff %}
+      <a href="{% url 'users' %}" class="btn btn-secondary btn-lg">All Users</a>
+      <a href="{% url 'useraccount' %}" class="btn btn-secondary btn-lg disabled">All Bookings</a>
+      <h1 class="text-center" style="margin-top: 10px;">All Bookings</h1>
+      {% for booking in bookings %}
+      <div class="card" style="width: 100%; margin-bottom: 10px;">
+        <div class="card-body">
+          <div class="card-text">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                </tr>
+                <tr>
+                  <td>{{ booking.date_for_visit }}</td>
+                  <td>{{ booking.time_for_visit }}</td>
+                </tr>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">email</th>
+
+                </tr>
+                <tr>
+                  <td>{{ booking.first_name }} {{ booking.last_name }}</td>
+
+                </tr>
+                <tr>
+                  <th scope="col">Email</th>
+                  <th scope="col">Created On</th>
+                </tr>
+                <tr>
+                  <td>{{ booking.email }}</td>
+                  <td>{{ booking.created_on}}</td>
+                </tr>
+                <tr>
+                  <th scope="col">Username</th>
+                </tr>
+                <tr>
+                  <td>{{ booking.user }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <a href="/edit_booking/{{ booking.id }}" class="btn btn-primary">Update</a>
+          <a href="/delete/{{ booking.id }}" class="btn btn-danger"
+            onclick="return confirm('Are you sure you want to delete? This can not be undone.')">Delete</a>
+        </div>
+      </div>
+
+      {% endfor %}
+      {% else %}
+      <!-- For regular user, only shows that users bookings -->
+      <h1 class="text-center" style="margin-top: 10px;">My Bookings</h1>
+      {% for booking in bookings %}
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <div class="card-text">
+            <div class="table-responsive">
+              <table class="table">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Created On</th>
+                </tr>
+                <tr>
+                  <td>{{ booking.date_for_visit }}</td>
+                  <td>{{ booking.time_for_visit }}</td>
+                  <td>{{ booking.created_on}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

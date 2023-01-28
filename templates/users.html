@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-sm-6 mx-auto">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success">
+        <strong>{{message}}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 mx-auto text-center">
+            <!-- Shows all users to staff. Staff is able to delete or remove it. -->
+            {% if user.is_staff %}
+            <a href="{% url 'users' %}" class="btn btn-secondary btn-lg disabled">All Users</a>
+            <a href="{% url 'useraccount' %}" class="btn btn-secondary btn-lg">All Bookings</a>
+            <h1 class="text-center" style="margin-top: 10px;">All Users</h1>
+            <div class="card-deck text-center">
+                {% for user in users %}
+                <div class="card bg-light mb-3 mx-auto" style="max-width: 36rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">User: {{ user.username }} {% if user.is_staff %}<span
+                                class="btn btn-info btn-sm disabled">Is Staff</span>{% endif %}</h5>
+                        <p class="card-text">{{ user.email }}</p>
+                        <a href="/delete_user/{{ user.id }}" class="btn btn-danger"
+                            onclick="return confirm('Are you sure you want to delete? This can not be undone.')">Delete
+                            User</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -70,10 +70,9 @@
             </li>
             <!--book button-->
             {% if user.is_authenticated %}
-            <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'booking' %}">Book an
-                    appointment</a>
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
             </li>
-            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'useraccount' %}">Manage booking</a></li>
             {% else %}
             <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
             <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
@@ -81,14 +80,17 @@
 
         </ul>
     </div>
-       <div class="d-none d-md-block">
-        {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
+    <div>
         <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
             <a href="{% url 'booking' %}" id="booking">Book an appointment</a></p>
-        {% else %}
-        <p class="navbar-text my-auto mr-2" id="inline1">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
-            <a href="{% url 'account_login' %}" id="booking1">Sign In to book an appointment</a></p>
-        {% endif %}
+
+    </div>
+
+    {% else %}
+    <p class="navbar-text my-auto mr-2" id="inline1">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
+        <a href="{% url 'account_login' %}" id="booking1">Sign In to book an appointment</a></p>
+    {% endif %}
     </div>
 
 

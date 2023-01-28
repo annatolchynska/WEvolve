@@ -1,8 +1,8 @@
-// Code snippet from jQuery Timepicker to show custom times to the form field
+// Code snippet from jQuery Timepicker to show times in the form field
 $(document).ready(function () {
     $('#id_time_for_visit').timepicker({
         timeFormat: 'HH:mm',
-        interval: 60,
+        interval: 30,
         minTime: '9',
         maxTime: '19:00',
         defaultTime: '13',

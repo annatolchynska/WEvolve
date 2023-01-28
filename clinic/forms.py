@@ -1,6 +1,6 @@
-from .models import BookAppointment
 from django import forms
 from django.forms import ModelForm
+from .models import BookAppointment
 import datetime
 
 

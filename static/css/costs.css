@@ -10,7 +10,7 @@ body {
 .callout-container {
 
     height: 100%;
-    background: url('/static/media/costs.jpg') no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/dzdl7p7ok/image/upload/v1674761511/static/media/costs.30f0a5f70e82.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

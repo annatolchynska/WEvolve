@@ -18,7 +18,6 @@ class BookAppointment(admin.ModelAdmin):
         'email',
         'date_for_visit',
         'time_for_visit',
-        'approved'
         )
-    list_filter = ('approved', 'date_for_visit', 'created_on')
+    list_filter = ('date_for_visit', 'created_on')
     search_fields = ('first_name', 'last_name', 'email')
