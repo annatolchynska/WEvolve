@@ -70,7 +70,7 @@ body {
 
 }
 
-#inline {
+#inline, #inline1 {
 
     color: #4a4041;
     font-weight: lighter;
@@ -78,7 +78,7 @@ body {
 
 }
 
-#booking {
+#booking, #booking1 {
 
     color: #051a00;
     font-size: larger;

@@ -76,7 +76,7 @@ body {
     margin: 2px;
 }
 
-#inline {
+#inline, #inline1 {
 
     color: rgb(94, 155, 58);
     font-weight: lighter;
@@ -85,7 +85,7 @@ body {
 
 }
 
-#booking {
+#booking, #booking1 {
 
     color: white;
     font-size: larger;

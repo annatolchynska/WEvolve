@@ -270,7 +270,7 @@ body {
     
 }
 
-#inline {
+#inline, #inline1 {
 
     color: rgb(245, 145, 127);
     font-weight: lighter;
@@ -278,7 +278,7 @@ body {
 
 }
 
-#booking {
+#booking, #booking1 {
 
     color: white;
     font-size: larger;
