@@ -95,6 +95,8 @@ The form contains all the necessary fields such as first name, last name, email,
 
 The User page where they can manage their appointments (reschedule/cancel).
 
+<img src="./static/media/usersbookings.png">
+
 The page where staff can manage all appointments (reschedule them by demand and cancel as well).
 
 <img src="./static/media/staffmanage.png">
@@ -122,6 +124,7 @@ The website has a logo adn it has a footer on the landing and contact pages.
 * Fontawesome
 * Favicon
 * Cloudinary  
+* Lucidchart
 
 ### Testing
 #### Lighthouse Testing
@@ -204,41 +207,41 @@ No issues were found.
 
 ---
 
-#### Libraries
+### Libraries
 The following libraries are used in the project and are located in the requirements.txt file:
 
-asgiref==3.6.0
-cloudinary==1.31.0
-dj-database-url==0.5.0
-dj3-cloudinary-storage==0.0.6
-Django==3.2.16
-django-allauth==0.52.0
-django-crispy-forms==1.14.0
-django-summernote==0.8.20.0
-gunicorn==20.1.0
-oauthlib==3.2.2
-psycopg2==2.9.5
-PyJWT==2.6.0
-python3-openid==3.2.0
-pytz==2022.7.1
-requests-oauthlib==1.3.1
-sqlparse==0.4.3
+* asgiref==3.6.0
+* cloudinary==1.31.0
+* dj-database-url==0.5.0
+* dj3-cloudinary-storage==0.0.6
+* Django==3.2.16
+* django-allauth==0.52.0
+* django-crispy-forms==1.14.0
+* django-summernote==0.8.20.0
+* gunicorn==20.1.0
+* oauthlib==3.2.2
+* psycopg2==2.9.5
+* PyJWT==2.6.0
+* python3-openid==3.2.0
+* pytz==2022.7.1
+* requests-oauthlib==1.3.1
+* sqlparse==0.4.3
 
 ### Bugs and unfixed bugs
 While I was early deploying to Heroku, I got an error and the app wasn't working. 
 
 <img src="./static/media/error.jpg">
 
-The issue was that the cloudinary storage wasn't install through the terminal. Then it was installed properly and the app successfully was deployed.
+The issue was that the cloudinary storage wasn't install properly in requirement.txt file. The issue was fixed and the app successfully was deployed.
 
 ### Deployment:
 The project was deployed to Heroku using the following steps:
 
 * Create a new Heroku app
-* Set the build backs to 'Python' and 'NodeJS' in that order
+* Add all necessary config vars (Secret_key, cloudinary, port etc).
 * Link the Heroku app to the repository
-* Push my final code via the terminal after finishing the project.
-* Select 'deploy'
+* Push final code via the terminal after finishing the project.
+* Select 'deploy'.
 
 #### Elephant SQL
 The database was set up by following the steps beneath:
@@ -261,6 +264,3 @@ Design ideas were taken from the walkthrough project "Bootstrapping Your Next Bi
 some code was taken from walkthrough projects "Hello Django" and "I think therefore I blog".
 The idea of the website was taken partly from [Balance luxury rehab](https://balanceluxuryrehab.com/).
 Some ideas were taken from youtube tutorials: [Build a doctor website with django](https://www.youtube.com/watch?v=3_3q_dE4_qs&ab_channel=SelmiTech), [Build dental appointment form](https://www.youtube.com/watch?v=rHZwE1AK1h8&ab_channel=Codemy.com),[Django tutorial on how to create a booking system for health clinic](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78).
-
-
-

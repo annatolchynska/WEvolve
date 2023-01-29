@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 });
 
-// Making the alerts dissapear after 3 seconds
+// Making the message-alerts dissapear in 3 seconds
 setTimeout(fade_out, 3000);
 
 function fade_out() {
