@@ -105,7 +105,7 @@ The website has a logo adn it has a footer on the landing and contact pages.
 
 <img src="./static/media/faviconlogo.png">
 
-<img src="./static/media/footer.png">
+<img src="./static/media/footerscr.png">
 
 ---
 
