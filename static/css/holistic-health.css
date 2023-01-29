@@ -5,6 +5,7 @@ body {
     font-family: 'Yeon Sung', serif;
 
 }
+
 /*main header*/
 .callout-container {
 
@@ -14,21 +15,20 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     display: flex;
     position: absolute;
 
 }
 
-
-
 #om {
 
     font-size: 35px;
-    color:white;
+    color: white;
     text-shadow: 1px 1px 1px black;
     padding-left: 50%;
+
 }
+
 /*main description*/
 .jumbotron .lead {
 
@@ -227,6 +227,7 @@ body {
 .navbar .navbar-brand:hover {
 
     color: white;
+
 }
 
 .navbar .navbar-toggler {
@@ -255,6 +256,7 @@ body {
 .dropdown-menu {
 
     margin: 2px;
+
 }
 
 .navbar .navbar-toggler {
@@ -266,11 +268,12 @@ body {
 
 #sign {
 
-    color:white;
-    
+    color: white;
+
 }
 
-#inline, #inline1 {
+#inline,
+#inline1 {
 
     color: rgb(191, 178, 187);
     font-weight: lighter;
@@ -278,7 +281,8 @@ body {
 
 }
 
-#booking, #booking1 {
+#booking,
+#booking1 {
 
     color: white;
     font-size: larger;
@@ -293,9 +297,11 @@ body {
     .callout-container {
 
         position: relative;
+
     }
 
 }
+
 /* media queries */
 /* for sreens size from 950px and down */
 @media screen and (max-width: 950px) {
@@ -303,10 +309,10 @@ body {
     .callout-container {
 
         position: relative;
+
     }
 
 }
-
 
 /* media queries */
 /* for sreens size from 730px and down */
@@ -322,13 +328,14 @@ body {
     .callout-container {
 
         position: relative;
+
     }
 
     #om {
 
         font-size: 25px;
-    }
 
+    }
 
     /* media queries */
     /* for sreens size from 450px and down */
@@ -343,6 +350,7 @@ body {
         .callout-container {
 
             position: relative;
+
         }
 
         .jumbotron .lead {
@@ -355,6 +363,7 @@ body {
         #om {
 
             font-size: 25px;
+
         }
 
     }

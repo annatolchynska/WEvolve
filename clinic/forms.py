@@ -6,7 +6,7 @@ import datetime
 
 class DateInput(forms.DateInput):
     """
-   calendar showing when choosing the date.
+calendar showing when choosing the date.
 credits: https://webpedia.net/how-to-use-datepicker-in-django
      """
     input_type = 'date'
@@ -18,7 +18,7 @@ class TimeInput(forms.TimeInput):
 
 class BookingForm(forms.ModelForm):
     """
-    Presents the booking form to the user.
+    Shows the booking form to the user.
     Dates to choose from is at
     least one day in future, and a maximum
     of 25 days.
@@ -41,10 +41,7 @@ class BookingForm(forms.ModelForm):
 
 class EditBooking(forms.ModelForm):
     """
-    Without the restrictions of at least
-    one day in the future. Because a
-    staff member should be able to update
-    the booking if needed.
+    The form for update booking.
     """
     class Meta:
         model = BookAppointment

@@ -40,6 +40,7 @@ body {
 .navbar .navbar-brand:hover {
 
     color: white;
+
 }
 
 .navbar .navbar-toggler {
@@ -73,11 +74,12 @@ body {
 
 #sign {
 
-    color:white;
-    
+    color: white;
+
 }
 
-#inline, #inline1 {
+#inline,
+#inline1 {
 
     color: rgb(94, 155, 58);
     font-weight: lighter;
@@ -86,7 +88,8 @@ body {
 
 }
 
-#booking, #booking1 {
+#booking,
+#booking1 {
 
     color: white;
     font-size: larger;
@@ -216,26 +219,25 @@ body {
 }
 
 /* description */
-
 .lead {
 
-font-size: 25px;
-color:rgb(3, 73, 3);
-text-shadow: 1px 1px 1px white;
-padding-left: 30px;
-padding-right: 30px;
+    font-size: 25px;
+    color: rgb(3, 73, 3);
+    text-shadow: 1px 1px 1px white;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 
 /*prices*/
 .p-2 {
 
-    color:white;
+    color: white;
     font-size: 25px;
     text-shadow: 2px 2px 2px rgb(1, 41, 1);
     padding-left: 30px;
-padding-right: 30px;
-text-align: center;
+    padding-right: 30px;
+    text-align: center;
 
 }
 
@@ -245,24 +247,22 @@ text-align: center;
     width: 250px;
     height: 3px;
     margin-left: 40%;
-   
 
 }
 
 .residence {
 
     font-size: 25px;
-    color:rgb(1, 67, 1);
+    color: rgb(1, 67, 1);
     text-shadow: 1px 1px 1px white;
     padding: 30px;
 
 }
 
-
 /*link to the start of the page*/
 #home {
 
-    color:rgb(3, 73, 3);
+    color: rgb(3, 73, 3);
     padding-top: 50px;
     font-size: 30px;
     text-shadow: 1px 1px 1px white;
@@ -287,6 +287,7 @@ text-align: center;
 
         font-size: 25px;
         text-align: center;
+
     }
 
     .block-divider {
@@ -301,7 +302,6 @@ text-align: center;
         text-align: center;
 
     }
-
 }
 
 /* media queries */
@@ -325,13 +325,13 @@ text-align: center;
 
         font-size: 20px;
         text-align: center;
-        color:rgb(1, 29, 1)
-
+        color: rgb(1, 29, 1)
     }
 
     .residence {
 
         font-size: 20px;
+
     }
 
 }

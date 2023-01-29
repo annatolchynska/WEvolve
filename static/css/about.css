@@ -40,6 +40,7 @@ body {
 .navbar .navbar-brand:hover {
 
     color: white;
+
 }
 
 .navbar .navbar-toggler {
@@ -67,16 +68,18 @@ body {
 
 #sign {
 
-    color:white;
-    
+    color: white;
+
 }
 
 .dropdown-menu {
 
     margin: 2px;
+
 }
 
-#inline, #inline1 {
+#inline,
+#inline1 {
 
     color: rgb(94, 155, 58);
     font-weight: lighter;
@@ -85,7 +88,8 @@ body {
 
 }
 
-#booking, #booking1 {
+#booking,
+#booking1 {
 
     color: white;
     font-size: larger;
@@ -207,10 +211,10 @@ body {
 .block-divider {
 
     width: 250px;
-   height: 2px;
-    color:white;
+    height: 2px;
+    color: white;
     margin-left: 40%;
-    
+
 }
 
 #icon {
@@ -264,7 +268,7 @@ body {
 /*link to the start of the page*/
 #home {
 
-    color:white;
+    color: white;
     padding-top: 50px;
     padding-bottom: 30px;
     font-size: 30px;
@@ -295,7 +299,6 @@ body {
         height: 1px;
 
     }
-
 }
 
 #icon {
@@ -309,6 +312,7 @@ body {
 /* media queries */
 /* for sreens size from 450px and down */
 @media screen and (max-width: 450px) {
+
     .jumbotron .lead {
 
         text-align: justify;
@@ -318,20 +322,24 @@ body {
     }
 
     .block-divider {
+
         width: 75px;
         height: 2px;
+
     }
 
     #icon {
+
         justify-content: center;
         font-size: 30px;
         text-shadow: none;
+
     }
 
     .wevolve {
 
         font-size: 30px;
-        
+
     }
 
 }

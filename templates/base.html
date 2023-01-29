@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
-
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WEvolve</title>
     <link rel="icon" type="image/x-icon" href="{% static 'media/favicon.ico' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +23,6 @@
     <script src="https://kit.fontawesome.com/5d093ab506.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <!--Nav-->
@@ -30,7 +30,6 @@
     <!--brand and logo link to the landing page-->
     <a href="{% url 'home' %}" class="navbar-brand">
         WEvolve <i class="fa-solid fa-yin-yang"></i></a>
-
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span></button>
@@ -77,30 +76,23 @@
             <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
             <li class="nav-item mr-2"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
             {% endif %}
-
         </ul>
     </div>
     {% if user.is_authenticated %}
     <div>
         <p class="navbar-text my-auto mr-2" id="inline">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
             <a href="{% url 'booking' %}" id="booking">Book an appointment</a></p>
-
     </div>
-
     {% else %}
-    <p class="navbar-text my-auto mr-2" id="inline1">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
-        <a href="{% url 'account_login' %}" id="booking1">Sign In to book an appointment</a></p>
-    {% endif %}
+    <div>
+        <p class="navbar-text my-auto mr-2" id="inline1">It's a safe space <i class="fa-solid fa-hand-sparkles"></i>
+            <a href="{% url 'account_login' %}" id="booking1">Sign In to book an appointment</a></p>
+        {% endif %}
     </div>
-
-
 </nav>
-
 {% block content %}
 <!-- Content Goes here -->
-
 {% endblock content %}
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
 </script>

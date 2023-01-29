@@ -194,6 +194,7 @@ body {
         transform: translateY(-0.2em);
 
     }
+
 }
 
 /*name of the description*/
@@ -209,7 +210,7 @@ body {
     color: white;
     width: 250px;
     height: 2px;
-   margin-left: 45%;
+    margin-left: 45%;
 
 }
 
@@ -233,6 +234,7 @@ body {
 .navbar .navbar-brand:hover {
 
     color: white;
+
 }
 
 .navbar .navbar-toggler {
@@ -266,11 +268,12 @@ body {
 
 #sign {
 
-    color:white;
-    
+    color: white;
+
 }
 
-#inline, #inline1 {
+#inline,
+#inline1 {
 
     color: rgb(245, 145, 127);
     font-weight: lighter;
@@ -278,7 +281,8 @@ body {
 
 }
 
-#booking, #booking1 {
+#booking,
+#booking1 {
 
     color: white;
     font-size: larger;
@@ -317,6 +321,7 @@ body {
     /* media queries */
     /* for sreens size from 450px and down */
     @media screen and (max-width: 450px) {
+
         .buddha {
 
             font-size: 20px;

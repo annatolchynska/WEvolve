@@ -15,9 +15,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     display: flex;
     position: relative;
+
 }
 
 .content-container {
@@ -41,6 +41,7 @@ body {
 .navbar .navbar-brand {
 
     color: #85131C;
+
 }
 
 .navbar .navbar-brand:hover {
@@ -48,7 +49,6 @@ body {
     color: #4B0082;
 
 }
-
 
 .navbar .navbar-toggler {
 
@@ -79,7 +79,8 @@ body {
 
 }
 
-#inline, #inline1 {
+#inline,
+#inline1 {
 
     color: #85131C;
     font-weight: lighter;
@@ -87,7 +88,8 @@ body {
 
 }
 
-#booking, #booking1 {
+#booking,
+#booking1 {
 
     color: #4B0082;
     font-size: larger;
@@ -113,13 +115,19 @@ body {
 }
 
 @keyframes rotation {
+
     from {
+
         transform: rotate(0deg);
+
     }
 
     to {
+
         transform: rotate(359deg);
+
     }
+
 }
 
 #description {
@@ -214,19 +222,24 @@ body {
 
 }
 
-
 @-webkit-keyframes wave-text {
 
     00% {
+
         transform: translateY(0.2em);
+
     }
 
     60% {
+
         transform: translateY(-0.8em);
+
     }
 
     100% {
+
         transform: translateY(0.2em);
+
     }
 
 }
@@ -234,15 +247,21 @@ body {
 @keyframes wave-text {
 
     00% {
+
         transform: translateY(0.2em);
+
     }
 
     60% {
+
         transform: translateY(-0.8em);
+
     }
 
     100% {
+
         transform: translateY(0.2em);
+
     }
 
 }
@@ -253,8 +272,9 @@ body {
     color: #4B0082;
     margin: 0;
     padding: 0;
-    
+
 }
+
 /* media queries */
 /* for sreens size from 1200px and down */
 @media screen and (max-width: 1200px) {
@@ -285,7 +305,6 @@ body {
         padding-left: 0;
 
     }
-
 }
 
 /* media queries */

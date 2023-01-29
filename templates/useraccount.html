@@ -9,7 +9,6 @@
       {% for message in messages %}
       <div class="alert alert-success show" role="alert">
         <strong>{{message}}</strong>
-        </button>
       </div>
       {% endfor %}
       {% endif %}
@@ -67,7 +66,7 @@
 
       {% endfor %}
       {% else %}
-      <!-- For regular user, only shows that users bookings -->
+      <!-- For authenticated user, shows only that user's bookings -->
       <h1 class="text-center" style="margin-top: 10px;">My Bookings</h1>
       {% for booking in bookings %}
       <div class="card" style="width: 100%;">

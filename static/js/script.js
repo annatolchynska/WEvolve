@@ -1,4 +1,4 @@
-// Code snippet from jQuery Timepicker to show times in the form field
+// Code from jQuery Timepicker that shows time in the form
 $(document).ready(function () {
     $('#id_time_for_visit').timepicker({
         timeFormat: 'HH:mm',

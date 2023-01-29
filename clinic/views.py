@@ -53,7 +53,6 @@ def booking(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Booking placed successfully.')
-
             return redirect('booking')
     else:
         form = BookingForm()
@@ -102,7 +101,7 @@ def edit_booking(request, booking_id):
     has been made.
     """
     try:
-        booking = get_object_or_404(PlaceBooking, id=booking_id)
+        booking = get_object_or_404(BookAppointment, id=booking_id)
         if request.method == 'POST':
             form = EditBooking(request.POST, instance=booking)
             if form.is_valid():
@@ -114,7 +113,7 @@ def edit_booking(request, booking_id):
         context = {
                 'form': form
             }
-        return render(request, 'edit.html', context)
+        return render(request, 'edit_booking.html', context)
     except Http404 as err:
         messages.error(request, 'Sorry, booking not found.')
         return redirect('useraccount')
